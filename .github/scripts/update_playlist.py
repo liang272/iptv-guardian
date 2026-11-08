@@ -460,7 +460,11 @@ def main():
                 ch['active'] = e['url']
                 ch['active_headers'] = e['headers']
             urls = {c['url'] for c in ch['candidates']}
-            if e['url'] not in urls:
+            # 候选池已满时不再追加：否则被裁掉的地址每轮都会被上游重新加回，
+            # 造成 5 分钟周期里无意义的反复增删与刷屏提交。
+            if (e['url'] not in urls and
+                    (len(ch['candidates']) < MAX_CANDIDATES
+                     or e['url'] == ch['active'])):
                 ch['candidates'].append({'url': e['url'], 'headers': e['headers'],
                                          'weight': w, 'ok': 0, 'fail': 0,
                                          'unknown': 0, 'consec_fail': 0,
@@ -563,10 +567,10 @@ def main():
         # 所有候选都不可用：尝试回滚到上一个已验证可用的地址
         prev = ch.get('prev_active')
         if prev and prev != ch['active']:
-            pv = probe({'url': prev, 'headers': ch.get('active_headers') or {}})
+            prev_cand = find_cand(ch, prev) or {'url': prev, 'headers': {}}
+            pv = probe(item_of(prev_cand))
             if pv['ok'] is not False:
-                cand = find_cand(ch, prev) or {'url': prev, 'headers': {}}
-                switch_to(ch, cand, 'heal')
+                switch_to(ch, prev_cand, 'heal')
                 rollback += 1
                 state['log'][-1]['msg'] += '（回滚历史可用源）'
                 continue
