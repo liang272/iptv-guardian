@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T19:36:23.717733+00:00
+# 自动维护：2026-11-08T20:16:00.191476+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -90,6 +90,8 @@ http://39.134.19.68/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/index
 http://39.134.19.153/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/index.m3u8
 #EXTINF:-1 tvg-id="CNDFilmDiscoveryChannel.cn@SD" tvg-name="CND 电影探索频道" group-title="大陆",CND 电影探索频道
 http://125.210.152.18:9090/live/FXZL_750.m3u8
+#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" group-title="大陆",潮州公共频道
+http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD" tvg-name="赤峰综合新闻频道" group-title="大陆",赤峰综合新闻频道
 http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
 #EXTINF:-1 tvg-id="ChinaWeatherChannel.cn@SD" tvg-name="中国天气" group-title="大陆",中国天气
@@ -158,6 +160,8 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8
 https://stream.jmtv.com.cn/xwzh/sd/live.m3u8?_upt=341f4b8e1791883036
 #EXTINF:-1 tvg-id="JiuquanTVNewsComprehensiveChannel.cn@SD" tvg-name="酒泉新闻综合频道" group-title="大陆",酒泉新闻综合频道
 http://117.156.28.119/270000001111/1110000001/index.m3u8
+#EXTINF:-1 tvg-id="KangbaTV.cn@SD" tvg-name="康巴卫视" group-title="大陆",康巴卫视
+http://110.185.237.164:8888/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="LanzhouComprehensiveNewsChannel.cn@SD" tvg-name="兰州综合新闻频道" group-title="大陆",兰州综合新闻频道
 https://liveplus.lzr.com.cn/xwzh/HD/live.m3u8
 #EXTINF:-1 tvg-id="LanzhouCultureTourismChannel.cn@SD" tvg-name="兰州文旅频道" group-title="大陆",兰州文旅频道
