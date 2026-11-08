@@ -53,6 +53,7 @@ SOURCES_DIR = os.path.join(ROOT, 'sources.d')
 STATE = os.path.join(ROOT, 'state.json')
 OUT_M3U = os.path.join(ROOT, 'docs', 'live.m3u')
 OUT_HEALTHY = os.path.join(ROOT, 'docs', 'healthy.m3u')
+OUT_VLC = os.path.join(ROOT, 'docs', 'vlc.m3u')
 OUT_STATUS = os.path.join(ROOT, 'docs', 'status.json')
 NAMES = os.path.join(ROOT, 'names_zh.json')
 
@@ -363,12 +364,22 @@ def zh_name(c) -> str:
     return NAME_ZH.get(k) or fallback_zh(c.get('name', ''))
 
 
-def render(chans, updated_iso, healthy_only=False):
-    lines = ['#EXTM3U',
-             f'# 自动维护：{updated_iso}',
-             '# 固定地址，后台只替换失效频道的源，订阅 URL 永不改变']
+def render(chans, updated_iso, healthy_only=False, vlc_opts=False):
+    """生成 M3U 播放列表。
+
+    默认输出「最大兼容」格式：#EXTINF 的下一行必须直接是频道 URL，
+    中间不插入任何 #EXTVLCOPT。大量直播软件 / 电视盒子的简易解析器按
+    「#EXTINF 下一行 = 地址」读取，遇到中间的 #EXTVLCOPT 会把它当成
+    非法源地址，从而整份列表报「处理失败 / 解析失败」。
+    VLC / Kodi 专用的断流重连、缓冲、鉴权头属性单独输出 docs/vlc.m3u。
+    """
+    lines = ['#EXTM3U', f'# 自动维护：{updated_iso}']
     if healthy_only:
         lines.append('# 纯净版：只保留未确认失效的频道')
+    if vlc_opts:
+        lines.append('# VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）')
+    else:
+        lines.append('# 通用兼容格式：频道信息行之后紧跟播放地址')
     for c in chans:
         if not c.get('active'):
             continue
@@ -379,18 +390,20 @@ def render(chans, updated_iso, healthy_only=False):
         name = zh_name(c)
         attrs = [f'tvg-id="{c.get("tvg_id") or c["key"]}"',
                  f'tvg-name="{name}"']
-        if c.get('logo'):
+        # 兼容版不带 tvg-logo：图床多为境外地址，部分播放器会卡在拉图标上
+        if vlc_opts and c.get('logo'):
             attrs.append(f'tvg-logo="{c["logo"]}"')
         attrs.append(f'group-title="{group}"')
         lines.append(f'#EXTINF:-1 {" ".join(attrs)},{name}')
-        # 播放器侧加载优化：断流自动重连、缩短起播缓冲、透传鉴权头
-        lines.append('#EXTVLCOPT:http-reconnect=true')
-        lines.append(f'#EXTVLCOPT:network-caching={NETWORK_CACHING}')
-        h = c.get('active_headers') or {}
-        if h.get('User-Agent'):
-            lines.append('#EXTVLCOPT:http-user-agent=' + h['User-Agent'])
-        if h.get('Referer'):
-            lines.append('#EXTVLCOPT:http-referrer=' + h['Referer'])
+        if vlc_opts:
+            # 播放器侧加载优化：断流自动重连、缩短起播缓冲、透传鉴权头
+            lines.append('#EXTVLCOPT:http-reconnect=true')
+            lines.append(f'#EXTVLCOPT:network-caching={NETWORK_CACHING}')
+            h = c.get('active_headers') or {}
+            if h.get('User-Agent'):
+                lines.append('#EXTVLCOPT:http-user-agent=' + h['User-Agent'])
+            if h.get('Referer'):
+                lines.append('#EXTVLCOPT:http-referrer=' + h['Referer'])
         lines.append(c['active'])
     return '\r\n'.join(lines) + '\r\n'
 
@@ -633,7 +646,8 @@ def main():
     names_changed = state.get('names_hash') != NAMES_HASH
     dirty = bool(added or pool_added or healed or optimized or rollback
                  or flipped or names_changed)
-    first_run = not (os.path.exists(OUT_M3U) and os.path.exists(STATE))
+    first_run = not all(os.path.exists(p) for p in
+                        (OUT_M3U, OUT_HEALTHY, OUT_VLC, STATE))
     write_all = dirty or first_run
 
     os.makedirs(os.path.dirname(OUT_M3U), exist_ok=True)
@@ -648,6 +662,8 @@ def main():
             f.write(render(chans, updated_iso))
         with open(OUT_HEALTHY, 'w', encoding='utf-8', newline='') as f:
             f.write(render(chans, updated_iso, healthy_only=True))
+        with open(OUT_VLC, 'w', encoding='utf-8', newline='') as f:
+            f.write(render(chans, updated_iso, vlc_opts=True))
 
     prev = load_json(OUT_STATUS, {})
     prev_ts = float(prev.get('_ts', 0) or 0)
@@ -658,7 +674,8 @@ def main():
         with open(STATE, 'w', encoding='utf-8') as f:
             json.dump(state, f, ensure_ascii=False, indent=1)
     if write_all:
-        print(f"已更新 docs/live.m3u（{len(chans)} 频道）与 docs/healthy.m3u")
+        print(f"已更新 docs/live.m3u / healthy.m3u（{len(chans)} 频道，通用兼容格式）"
+              " 与 docs/vlc.m3u（VLC 增强版）")
     else:
         print("本轮无实质变化：订阅文件内容保持不变，不产生提交")
 

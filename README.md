@@ -12,11 +12,50 @@ https://liang272.github.io/iptv-guardian/live.m3u
 
 | 地址 | 内容 |
 |---|---|
-| `live.m3u` | 全部频道；确认失效的排到末尾并标记「待修复·xx」 |
+| `live.m3u` | **通用兼容版**：全部频道；确认失效的排到末尾并标记「待修复·xx」 |
 | `healthy.m3u` | **纯净版**：只保留未确认失效的频道，推荐优先用这个 |
+| `vlc.m3u` | **仅 VLC / Kodi**：带断流重连、缓冲优化、UA/Referer 透传的增强版 |
 | `status.json` | 巡检统计、候选池与加载质量概览、换源日志 |
 
-内容由后台自动更新，但三个 URL 都不变。
+内容由后台自动更新，但 URL 都不变。
+
+> `live.m3u` / `healthy.m3u` 已改为**最大兼容 M3U 格式**：频道信息行（`#EXTINF`）的下一行直接是播放地址，
+> 中间不插入任何 `#EXTVLCOPT`。绝大多数直播软件、电视盒子、IPTV 播放器都按这条规则解析。
+> 只有 VLC / Kodi 需要额外优化属性时，才用 `vlc.m3u`。
+
+## 播放软件显示「处理失败 / 解析失败」怎么办
+
+按可能性从高到低排查：
+
+| 可能原因 | 现象 | 处理 |
+|---|---|---|
+| **① 国内访问不到 `github.io`** | 手机浏览器打开地址也转圈/打不开；软件报「网络错误 / 获取失败」 | 改用下面的**国内加速地址**；或给 Pages 绑已备案的自定义域名 |
+| **② 旧版列表的 `#EXTVLCOPT` 导致解析失败**（已修复） | 之前版本能读、某些软件一直报「处理失败」 | 已改为通用兼容格式，**无需换地址**，在软件里删除并重新添加一次订阅（清掉本地缓存）即可 |
+| **③ 填错了输入框** | 软件把整条 M3U 地址当成「单条直播源」 | 找「添加订阅 / 网络导入 / M3U 地址 / 播放列表 URL」入口，不是「添加单个频道」 |
+| **④ 软件缓存了旧列表** | 服务端已修好，软件仍报错 | 删除订阅后重新添加，或清软件缓存 / 重启 App |
+| **⑤ 地址被截断或带多余参数** | 复制时少了 `.m3u`、多了空格或 `?v=` 参数 | 用纯地址，不要带参数 |
+
+**快速自检**：用手机或电脑浏览器直接打开订阅地址。能看到以 `#EXTM3U` 开头的纯文本，说明服务端正常、问题在软件或网络；打不开就是网络层（第 ① 条）。
+
+> M3U 列表只有几十 KB、仅在打开时拉取一次，它决定「能不能读到频道列表」；
+> **频道起播快慢取决于流媒体源本身**，换托管地址并不能给频道加速。
+
+### 国内可访问的加速地址
+
+以下地址代理同一个仓库文件，**内容与原地址一致、同样自动更新**；把 `healthy.m3u` 换成
+`live.m3u` 即用完整版。2026-11-08 实测均 HTTP 200：
+
+| 地址 | 说明 |
+|---|---|
+| `https://fastly.jsdelivr.net/gh/liang272/iptv-guardian@main/docs/healthy.m3u` | **推荐**：jsDelivr Fastly 节点，返回 `audio/x-mpegurl` |
+| `https://gcore.jsdelivr.net/gh/liang272/iptv-guardian@main/docs/healthy.m3u` | 备选节点（G-Core） |
+| `https://cdn.jsdelivr.net/gh/liang272/iptv-guardian@main/docs/healthy.m3u` | 默认节点 |
+| `https://ghproxy.net/https://raw.githubusercontent.com/liang272/iptv-guardian/main/docs/healthy.m3u` | 兜底代理，返回 `text/plain`（部分软件挑 MIME，优先用 jsDelivr） |
+
+jsDelivr 对 `@main` 默认缓存约 12 小时；本仓库在每次换源提交后会自动调用
+`purge.jsdelivr.net` 清缓存，让加速地址与 5 分钟巡检保持同步。若某节点仍返回旧内容，
+换上表中另一个节点即可。长期稳定且合规的做法是把**你自己的已备案域名 + 国内 CDN / 对象存储**
+指向这些文件；本工具不托管任何加速资源。
 
 ## 关于「全自动从全网搜集源」（请先读）
 
@@ -64,7 +103,9 @@ https://liang272.github.io/iptv-guardian/live.m3u
 
 - **探测侧**：24 并发、按 URL 去重、5 秒分级超时、只拉前 32KB 播放列表和首分片前 512 字节；候选池只在换源/抽样时探测，不拖慢常规巡检。
 - **持续择优**：空闲时每轮轮转抽样 24 个健康频道，若备用池里有评分明显更高（默认高 20 分）的源，就主动升级过去，单轮最多 8 个。也就是说不只是「坏了才换」，而是逐步把频道切到最快最稳的源。
-- **播放器侧**：输出里为每条频道写入 `#EXTVLCOPT:http-reconnect=true`（断流自动重连）、`#EXTVLCOPT:network-caching=1000`（缩短起播缓冲），并透传源所需的 `User-Agent` / `Referer`。不认识这些属性的播放器会自动忽略，无副作用。
+- **播放器侧（仅 `vlc.m3u`）**：增强版为每条频道写入 `#EXTVLCOPT:http-reconnect=true`（断流自动重连）、`#EXTVLCOPT:network-caching=1000`（缩短起播缓冲），并透传源所需的 `User-Agent` / `Referer`。
+  **通用列表 `live.m3u` / `healthy.m3u` 不带这些属性** —— 大量直播软件会把中间的属性行误当成频道地址，导致整份列表「处理失败」，兼容优先。
+- **列表体积**：兼容版去掉境外图床的 `tvg-logo` 与数百行属性，文件更小、打开更快。
 
 `status.json` 新增 `candidates_total` / `multi_candidate_channels` / `avg_candidates` / `median_latency_ms` / `optimized` / `rollback` 等字段，可直观看到候选池厚度和加载质量变化。
 
@@ -137,8 +178,9 @@ sources.d/说明.md                  格式与合规说明
 names_zh.json                      全量中文台名映射（可编辑）
 custom.m3u                         TVB 翡翠台等自定义补充源（可编辑）
 state.json                         每频道当前地址、备用池与质量统计（由脚本维护）
-docs/live.m3u                      固定订阅文件（由脚本生成）
-docs/healthy.m3u                   纯净版订阅文件（由脚本生成）
+docs/live.m3u                      固定订阅文件 · 通用兼容格式（由脚本生成）
+docs/healthy.m3u                   纯净版订阅文件 · 通用兼容格式（由脚本生成）
+docs/vlc.m3u                       VLC/Kodi 增强版（由脚本生成，含 #EXTVLCOPT）
 docs/status.json                   巡检状态看板（由脚本生成）
 ```
 
@@ -161,5 +203,5 @@ docs/status.json                   巡检状态看板（由脚本生成）
 - Pages 站点本身是**公开可访问**的（即使仓库私有也是如此）。请不要公开分享订阅地址。
 - GitHub Actions 定时任务在仓库 **60 天无任何活动**时会被自动禁用；本方案每 30 分钟有一次状态心跳提交，可避免触发。
 - 上游探测频率较高，若某个上游开始限流，把该源 `enabled` 设为 `false` 或移除即可。
-- `github.io` 在国内访问可能不稳定。若播放器取不到列表，可给 Pages 绑定自定义域名 + CDN，或改用方案 B 本机服务。
+- `github.io` 在国内访问可能不稳定。取不到列表请改用上面「国内可访问的加速地址」，或给 Pages 绑定自定义域名 + 国内 CDN，或用方案 B 本机服务。
 - 本工具不提供、不托管、不缓存任何节目内容，仅维护地址列表。请只接入已获合法授权或版权方主动公开的直播源，用于个人学习与家庭自建，遵守所在地广播电视与网络视听相关规定；中国香港、中国澳门、中国台湾地区频道的接收传播另有监管要求。

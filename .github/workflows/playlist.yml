@@ -76,6 +76,16 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # jsDelivr 对 @main 默认缓存约 12 小时；有换源时主动清缓存，
+      # 让国内加速地址与 5 分钟巡检保持同步，而不是拿到十几小时前的旧列表
+      - name: 刷新国内加速 CDN 缓存
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          for f in live.m3u healthy.m3u vlc.m3u; do
+            curl -fsS -m 15 "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/docs/$f" || true
+          done
+        continue-on-error: true
+
       - name: 配置 Pages
         if: steps.commit.outputs.changed == 'true'
         uses: actions/configure-pages@v5
