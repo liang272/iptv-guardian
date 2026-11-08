@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T22:48:46.186418+00:00
+# 自动维护：2026-11-08T23:22:04.427248+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -89,6 +89,10 @@ http://74.91.26.218:82/live/cctv2hd.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://74.91.26.218:82/live/cctv3hd.m3u8
+#EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K 超高清" tvg-logo="https://i.imgur.com/fxusYlX.png" group-title="大陆",CCTV-4K 超高清
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@SD" tvg-name="CCTV-6 电影" tvg-logo="https://i.imgur.com/rFiaef7.png" group-title="大陆",CCTV-6 电影
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -177,6 +181,10 @@ http://39.134.19.153/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/inde
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://125.210.152.18:9090/live/FXZL_750.m3u8
+#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="大陆",潮州公共频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD" tvg-name="赤峰综合新闻频道" tvg-logo="https://www.tvchinese.net/uploads/tv/cfxwzhpd.jpg" group-title="大陆",赤峰综合新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -313,10 +321,6 @@ https://stream.jmtv.com.cn/xwzh/sd/live.m3u8?_upt=341f4b8e1791883036
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://117.156.28.119/270000001111/1110000001/index.m3u8
-#EXTINF:-1 tvg-id="KangbaTV.cn@SD" tvg-name="康巴卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/kangbatv.jpg" group-title="大陆",康巴卫视
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://110.185.237.164:8888/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="LanzhouComprehensiveNewsChannel.cn@SD" tvg-name="兰州综合新闻频道" tvg-logo="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_c2a13a952c0111b21f081d672798c8ed~c5_300x300.jpeg?from=2956013662" group-title="大陆",兰州综合新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -592,7 +596,7 @@ https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 tvg-id="HBOAsia.sg@Taiwan" tvg-name="HBO 亚洲(中国台湾)" tvg-logo="https://i.imgur.com/cE2gBt6.png" group-title="中国台湾",HBO 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://202.150.165.66:8088/play/100-HBO/index.m3u8
+http://125.227.210.55:1003/VideoInput/play.ts
 #EXTINF:-1 tvg-id="HakkaTV.tw@SD" tvg-name="客家电视" tvg-logo="https://i.imgur.com/1CdGSbU.png" group-title="中国台湾",客家电视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -761,10 +765,6 @@ https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://74.91.26.218:82/live/cctv16hd.m3u8
-#EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K 超高清" tvg-logo="https://i.imgur.com/fxusYlX.png" group-title="待修复·大陆",CCTV-4K 超高清
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV5Plus.cn@SD" tvg-name="CCTV-5+ 体育赛事" tvg-logo="https://i.imgur.com/OK8mdJV.png" group-title="待修复·大陆",CCTV-5+ 体育赛事
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -773,10 +773,6 @@ https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://live2.rxip.sc96655.com/live/zxs_4000.m3u8?A=&E=&K=&P=&S=&U=
-#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="待修复·大陆",潮州公共频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD" tvg-name="东方卫视(国际)" tvg-logo="https://i.imgur.com/WqM6xnF.png" group-title="待修复·大陆",东方卫视(国际)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -837,6 +833,10 @@ https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/906341e6f19b4c4bacdc89941eb85d12/i
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/3ffc4824dce54b92be185555923ce382/index.m3u8
+#EXTINF:-1 tvg-id="KangbaTV.cn@SD" tvg-name="康巴卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/kangbatv.jpg" group-title="待修复·大陆",康巴卫视
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://110.185.237.164:8888/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="NanchangNewsGeneralistChannel.cn@SD" tvg-name="南昌新闻综合频道" tvg-logo="https://www.tvchinese.net/uploads/tv/nctv1.jpg" group-title="待修复·大陆",南昌新闻综合频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
