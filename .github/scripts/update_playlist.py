@@ -58,10 +58,11 @@ ORDER = ['大陆', '中国香港', '中国澳门', '中国台湾', '华语', '�
 
 # 全量中文台名映射（names_zh.json）；缺失时用兜底规则生成中文名
 try:
-    with open(NAMES, 'r', encoding='utf-8') as _f:
-        NAME_ZH = json.load(_f)
+    _NAMES_RAW = open(NAMES, 'rb').read()
+    NAME_ZH = json.loads(_NAMES_RAW.decode('utf-8'))
+    NAMES_HASH = hashlib.md5(_NAMES_RAW).hexdigest()
 except Exception:
-    NAME_ZH = {}
+    NAME_ZH, NAMES_HASH = {}, ''
 
 _SUBS = [
     (r'\bSatellite TV\b', '卫视'), (r'\bNews Channel\b', '新闻频道'),
@@ -399,7 +400,9 @@ def main():
     # 4) 幂等写入：只有实质变化才更新播放列表与 state，避免高频周期刷屏提交
     flipped = any(bool(c.get('healthy', True)) != health_before.get(k, True)
                   for k, c in channels.items())
-    dirty = bool(added or pool_added or healed or flipped)
+    # 台名映射表改动也要触发播放列表重写（否则改了中文名线上不刷新）
+    names_changed = state.get('names_hash') != NAMES_HASH
+    dirty = bool(added or pool_added or healed or flipped or names_changed)
     first_run = not (os.path.exists(OUT_M3U) and os.path.exists(STATE))
     write_all = dirty or first_run
 
@@ -411,6 +414,7 @@ def main():
                                   c['name']))
     if write_all:
         state['updated'] = updated_iso
+        state['names_hash'] = NAMES_HASH
         with open(OUT_M3U, 'w', encoding='utf-8', newline='') as f:
             f.write(render(chans, updated_iso))
         with open(OUT_HEALTHY, 'w', encoding='utf-8', newline='') as f:
