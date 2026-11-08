@@ -7,10 +7,21 @@
   某个频道失效时，从它的备用池里挑一个可用地址单独替换；
   最后重新生成 docs/live.m3u —— 文件名/URL 不变，播放器永远订阅同一个地址。
 
+探测结果分三态（重要）：
+  ok=True   可用
+  ok=False  明确失效（HTTP 4xx/5xx、返回的不是播放列表、分片报错等）
+  ok=None   不确定：连接超时/拒绝/DNS 失败。GitHub Actions 节点在海外，
+            访问国内运营商内网源普遍不通，这不等于用户端失效，
+            因此不判定失效、不换源、不降权、不删除频道。
+
+输出：
+  docs/live.m3u     全部频道，确认失效的排到末尾并标记「待修复」（主订阅地址，URL 不变）
+  docs/healthy.m3u  只含未确认失效的频道（纯净版，可选订阅）
+  docs/status.json  巡检统计与换源日志
+
 为避免高频周期产生大量无意义提交：
-  只有「新增频道 / 备用池变化 / 换源 / 健康状态翻转」才写 state.json 与 live.m3u；
-  status.json 按 STATUS_INTERVAL 节流写入（默认 30 分钟）；
-  其余轮次只做检测，不改动仓库内容。
+  只有「新增频道 / 备用池变化 / 换源 / 健康状态翻转」才写 state.json 与播放列表；
+  status.json 按 STATUS_INTERVAL 节流写入（默认 30 分钟）。
 
 仅使用 Python 标准库，无需安装依赖。
 """
@@ -21,6 +32,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -30,6 +42,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 SOURCES = os.path.join(ROOT, 'sources.json')
 STATE = os.path.join(ROOT, 'state.json')
 OUT_M3U = os.path.join(ROOT, 'docs', 'live.m3u')
+OUT_HEALTHY = os.path.join(ROOT, 'docs', 'healthy.m3u')
 OUT_STATUS = os.path.join(ROOT, 'docs', 'status.json')
 
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
@@ -40,6 +53,7 @@ WORKERS = int(os.environ.get('PROBE_WORKERS', '16'))
 STALE = float(os.environ.get('STALE_SECONDS', '0'))  # 0 = 每轮全量复检
 STATUS_INTERVAL = float(os.environ.get('STATUS_INTERVAL', '1800'))
 MAX_CANDIDATES = int(os.environ.get('MAX_CANDIDATES', '10'))
+ORDER = ['大陆', '中国香港', '中国澳门', '中国台湾', '华语', '其他']
 
 ATTR_RE = re.compile(r'''([A-Za-z0-9_.:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s,]+))''')
 
@@ -72,7 +86,6 @@ def parse(text: str, group: str) -> list:
             continue
         if line.startswith('#EXTINF'):
             flush()
-            # 找引号外的第一个逗号
             q, cut = None, len(line)
             for i, ch in enumerate(line):
                 if ch in ('"', "'"):
@@ -108,7 +121,6 @@ def parse(text: str, group: str) -> list:
     flush()
     if out:
         return out
-    # 兼容 `频道名,URL` 的 TXT
     res = []
     for line in (text or '').splitlines():
         line = line.strip()
@@ -131,7 +143,11 @@ def fetch(url: str) -> str:
 
 
 def probe(item) -> dict:
-    """返回 {'ok':bool,'latency_ms':int,'reason':str}。"""
+    """返回 {'ok': True/False/None, 'latency_ms':int, 'reason':str}。
+
+    None 表示「网络不可达，无法判定」——常见于海外节点访问国内内网源，
+    此时不应把频道判为失效。
+    """
     url = item['url']
     hdr = {'User-Agent': UA, 'Range': 'bytes=0-65535', 'Accept': '*/*'}
     hdr.update(item.get('headers') or {})
@@ -144,15 +160,18 @@ def probe(item) -> dict:
                         'latency_ms': int((time.time() - t0) * 1000)}
             data = r.read(65536)
             final = r.geturl()
+    except urllib.error.HTTPError as ex:
+        # 明确的 HTTP 4xx/5xx：属于确认失效，不是网络不可达
+        return {'ok': False, 'reason': f'HTTP {ex.code}',
+                'latency_ms': int((time.time() - t0) * 1000)}
     except Exception as ex:
-        return {'ok': False, 'reason': f'{type(ex).__name__}: {str(ex)[:60]}',
+        return {'ok': None, 'reason': f'网络不可达: {type(ex).__name__}',
                 'latency_ms': int((time.time() - t0) * 1000)}
     latency = int((time.time() - t0) * 1000)
     text = data.decode('utf-8', 'replace')
     if text.lstrip().startswith('#EXTM3U') or '.m3u8' in url.lower():
         if '#EXTM3U' not in text:
             return {'ok': False, 'reason': '无效播放列表', 'latency_ms': latency}
-        # 复检第一个分片，排除「能连上但没画面」的假活源
         seg = next((l.strip() for l in text.splitlines()
                     if l.strip() and not l.strip().startswith('#')), '')
         if seg:
@@ -161,10 +180,18 @@ def probe(item) -> dict:
                                               headers={'User-Agent': UA,
                                                        'Range': 'bytes=0-1024'})
                 with urllib.request.urlopen(req2, timeout=TIMEOUT) as r2:
-                    if r2.status >= 400 or not r2.read(512):
-                        return {'ok': False, 'reason': '分片不可读', 'latency_ms': latency}
+                    if r2.status >= 400:
+                        return {'ok': False, 'reason': '分片 HTTP 错误',
+                                'latency_ms': latency}
+                    if not r2.read(512):
+                        return {'ok': None, 'reason': '分片无数据（不确定）',
+                                'latency_ms': latency}
+            except urllib.error.HTTPError:
+                return {'ok': False, 'reason': '分片 HTTP 错误',
+                        'latency_ms': latency}
             except Exception:
-                return {'ok': False, 'reason': '分片不可读', 'latency_ms': latency}
+                return {'ok': None, 'reason': '分片不可达（不确定）',
+                        'latency_ms': latency}
         return {'ok': True, 'latency_ms': latency, 'reason': ''}
     if text.lstrip().startswith('<') or len(data) < 128:
         return {'ok': False, 'reason': '非视频数据', 'latency_ms': latency}
@@ -179,13 +206,35 @@ def load_json(path, default):
         return default
 
 
+def render(chans, updated_iso, healthy_only=False):
+    lines = ['#EXTM3U',
+             f'# 自动维护：{updated_iso}',
+             '# 固定地址，后台只替换失效频道的源，订阅 URL 永不改变']
+    if healthy_only:
+        lines.append('# 纯净版：只保留未确认失效的频道')
+    for c in chans:
+        if not c.get('active'):
+            continue
+        bad = not c.get('healthy', True)
+        if healthy_only and bad:
+            continue
+        group = ('待修复·' + c['group']) if bad else c['group']
+        attrs = [f'tvg-id="{c.get("tvg_id") or c["key"]}"',
+                 f'tvg-name="{c["name"]}"']
+        if c.get('logo'):
+            attrs.append(f'tvg-logo="{c["logo"]}"')
+        attrs.append(f'group-title="{group}"')
+        lines.append(f'#EXTINF:-1 {" ".join(attrs)},{c["name"]}')
+        lines.append(c['active'])
+    return '\r\n'.join(lines) + '\r\n'
+
+
 def main():
     sources = load_json(SOURCES, {'sources': []})['sources']
     state = load_json(STATE, {'channels': {}, 'log': []})
     channels = state.setdefault('channels', {})
     now = time.time()
-    added = 0
-    pool_added = 0
+    added = pool_added = 0
     health_before = {k: bool(c.get('healthy', True)) for k, c in channels.items()}
 
     def pull(src):
@@ -195,7 +244,7 @@ def main():
             print(f"[warn] 上游 {src.get('name')} 拉取失败: {type(ex).__name__}")
             return src, None
 
-    # 1) 并行拉取所有上游，把新地址补进各频道的备用池（不改动当前生效地址）
+    # 1) 并行拉取所有上游，把新地址补进备用池（不改动当前生效地址）
     with ThreadPoolExecutor(max_workers=max(1, min(8, len(sources) or 1))) as ex:
         pulled = list(ex.map(pull, sources))
     for src, text in pulled:
@@ -223,7 +272,7 @@ def main():
                 ch['candidates'] = (keep + [c for c in ch['candidates']
                                             if c['url'] != ch['active']][:MAX_CANDIDATES - 1])
 
-    # 2) 复检频道：STALE=0 时每轮全量检测（最短检测周期）
+    # 2) 每轮全量复检（STALE=0 对应最短检测周期）
     todo = [ch for ch in channels.values()
             if now - ch.get('last_check', 0) > STALE or not ch.get('healthy', True)]
     print(f"频道总数 {len(channels)}，本次需复检 {len(todo)} 个")
@@ -237,12 +286,13 @@ def main():
             try:
                 results[futs[f]] = f.result()
             except Exception as ex:
-                results[futs[f]] = {'ok': False, 'reason': str(ex)[:60], 'latency_ms': 0}
+                results[futs[f]] = {'ok': None, 'reason': str(ex)[:60], 'latency_ms': 0}
 
-    dead = [k for k, r in results.items() if not r['ok']]
-    print(f"确认失效 {len(dead)} 个频道，开始单独换源")
+    dead = [k for k, r in results.items() if r['ok'] is False]
+    unknown = [k for k, r in results.items() if r['ok'] is None]
+    print(f"确认失效 {len(dead)} 个，网络不确定 {len(unknown)} 个（不判失效、保留原地址）")
 
-    # 3) 对失效频道：从备用池找出一个可用地址，逐个替换（其它频道完全不动）
+    # 3) 对确认失效的频道：从备用池挑一个可用地址单独替换（其它频道完全不动）
     healed = 0
     for k in dead:
         ch = channels[k]
@@ -251,7 +301,7 @@ def main():
             ch['healthy'] = False
             ch['last_check'] = now
             state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{ch['name']}] 失效但无备用地址"})
+                {'t': now, 'msg': f"[{ch['name']}] 确认失效但无备用地址，保留原地址并标记待修复"})
             continue
         with ThreadPoolExecutor(max_workers=min(6, len(pool))) as ex:
             futs = {ex.submit(probe, c): c for c in pool}
@@ -260,9 +310,9 @@ def main():
                 try:
                     cand_res[futs[f]['url']] = f.result()
                 except Exception:
-                    cand_res[futs[f]['url']] = {'ok': False}
-        ok = [c for c in pool if cand_res[c['url']]['ok']]
-        ok.sort(key=lambda c: cand_res[c['url']]['latency_ms'])
+                    cand_res[futs[f]['url']] = {'ok': None}
+        ok = [c for c in pool if cand_res[c['url']]['ok'] is True]
+        ok.sort(key=lambda c: cand_res[c['url']].get('latency_ms', 99999))
         if ok:
             ch['active'] = ok[0]['url']
             ch['healthy'] = True
@@ -274,12 +324,15 @@ def main():
         else:
             ch['healthy'] = False
             state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{ch['name']}] 备用池 {len(pool)} 个地址均不可用"})
+                {'t': now, 'msg': f"[{ch['name']}] 备用池 {len(pool)} 个地址均不可用，标记待修复"})
         ch['last_check'] = now
 
     for k, r in results.items():
-        if r['ok']:
-            ch = channels[k]
+        ch = channels[k]
+        if r['ok'] is None:
+            # 探测节点不可达，不代表用户端失效：保留原地址与健康状态
+            ch['last_check'] = now
+        elif r['ok'] is True:
             ch['healthy'] = True
             ch['last_check'] = now
             ch['last_ok'] = now
@@ -287,57 +340,50 @@ def main():
     state['log'] = state.get('log', [])[-100:]
     updated_iso = datetime.now(timezone.utc).isoformat()
 
-    # 4) 幂等写入：只有实质变化才更新 M3U 与 state，避免高频周期刷屏提交
+    # 4) 幂等写入：只有实质变化才更新播放列表与 state，避免高频周期刷屏提交
     flipped = any(bool(c.get('healthy', True)) != health_before.get(k, True)
                   for k, c in channels.items())
     dirty = bool(added or pool_added or healed or flipped)
     first_run = not (os.path.exists(OUT_M3U) and os.path.exists(STATE))
-    write_playlist = dirty or first_run
+    write_all = dirty or first_run
 
     os.makedirs(os.path.dirname(OUT_M3U), exist_ok=True)
-    if write_playlist:
+    # 健康/不确定频道在前，确认失效的排到末尾并标记「待修复」
+    chans = sorted(channels.values(),
+                   key=lambda c: (0 if c.get('healthy', True) else 1,
+                                  ORDER.index(c['group']) if c['group'] in ORDER else 99,
+                                  c['name']))
+    if write_all:
         state['updated'] = updated_iso
-        order = ['大陆', '中国香港', '中国澳门', '中国台湾', '华语', '其他']
-        chans = sorted(channels.values(),
-                       key=lambda c: (order.index(c['group']) if c['group'] in order else 99,
-                                      c['name']))
-        lines = ['#EXTM3U',
-                 f'# 自动维护：{updated_iso}',
-                 '# 固定地址，后台只替换失效频道的源，订阅 URL 永不改变']
-        for c in chans:
-            if not c.get('active'):
-                continue
-            attrs = [f'tvg-id="{c.get("tvg_id") or c["key"]}"',
-                     f'tvg-name="{c["name"]}"']
-            if c.get('logo'):
-                attrs.append(f'tvg-logo="{c["logo"]}"')
-            attrs.append(f'group-title="{c["group"]}"')
-            lines.append(f'#EXTINF:-1 {" ".join(attrs)},{c["name"]}')
-            lines.append(c['active'])
         with open(OUT_M3U, 'w', encoding='utf-8', newline='') as f:
-            f.write('\r\n'.join(lines) + '\r\n')
+            f.write(render(chans, updated_iso))
+        with open(OUT_HEALTHY, 'w', encoding='utf-8', newline='') as f:
+            f.write(render(chans, updated_iso, healthy_only=True))
         with open(STATE, 'w', encoding='utf-8') as f:
             json.dump(state, f, ensure_ascii=False, indent=1)
-        print(f"已更新 docs/live.m3u（{len(chans)} 频道）")
+        print(f"已更新 docs/live.m3u（{len(chans)} 频道）与 docs/healthy.m3u")
     else:
         print("本轮无实质变化：订阅文件内容保持不变，不产生提交")
 
-    # status.json 按间隔节流，保证看板有心跳但不刷屏
     prev = load_json(OUT_STATUS, {})
     prev_ts = float(prev.get('_ts', 0) or 0)
     status_due = (not os.path.exists(OUT_STATUS) or dirty or first_run
                   or now - prev_ts >= STATUS_INTERVAL)
     if status_due:
+        healthy = sum(1 for c in channels.values() if c.get('healthy'))
         with open(OUT_STATUS, 'w', encoding='utf-8') as f:
             json.dump({'channels': len(channels), 'checked': len(todo),
-                       'dead': len(dead), 'healed': healed,
-                       'healthy': sum(1 for c in channels.values() if c.get('healthy')),
+                       'healthy': healthy, 'dead': len(dead), 'unknown': len(unknown),
+                       'healed': healed,
+                       'pending_fix': sum(1 for c in channels.values()
+                                          if not c.get('healthy')),
+                       'note': 'unknown=探测节点网络不可达，不等于用户端失效；此类频道保留原地址',
                        'interval': '每 5 分钟（GitHub Actions 允许的最短周期）',
                        'updated': updated_iso,
                        'log': state['log'][-20:][::-1], '_ts': now},
                       f, ensure_ascii=False, indent=2)
     print(f"完成：新增 {added} 频道，新增备用 {pool_added}，复检 {len(todo)}，"
-          f"失效 {len(dead)}，已单独换源 {healed}，实质变化={dirty}")
+          f"确认失效 {len(dead)}，不确定 {len(unknown)}，换源 {healed}，实质变化={dirty}")
 
 
 if __name__ == '__main__':
