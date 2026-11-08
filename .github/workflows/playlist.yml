@@ -1,0 +1,82 @@
+name: 自动维护 IPTV 播放列表
+
+on:
+  schedule:
+    # GitHub Actions 允许的最短周期：每 5 分钟（UTC）
+    # 注意：高峰期 GitHub 可能排队或跳过某次调度，实际间隔通常为 5~15 分钟
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'sources.json'
+      - '.github/scripts/update_playlist.py'
+      - '.github/workflows/playlist.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: iptv-update
+  # 高频周期下丢弃排队中的旧任务，避免堆积
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # 单次运行必须短于调度周期，否则会不断排队
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 全量检测失效并单独替换失效频道
+        env:
+          PROBE_TIMEOUT: '6'
+          FETCH_TIMEOUT: '10'
+          PROBE_WORKERS: '16'
+          # 0 = 每轮全量复检（最短检测周期）
+          STALE_SECONDS: '0'
+          # 状态看板心跳间隔（秒），避免每 5 分钟刷一次提交
+          STATUS_INTERVAL: '1800'
+          MAX_CANDIDATES: '10'
+        run: python .github/scripts/update_playlist.py
+
+      - name: 提交结果（地址不变，只更新内容）
+        id: commit
+        run: |
+          git config user.name  "iptv-guardian-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs state.json
+          if git diff --cached --quiet; then
+            echo "本次无失效频道，无需提交"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: 自动替换失效频道 $(date -u +'%Y-%m-%d %H:%M')"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 配置 Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: 上传站点产物
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: 发布到 GitHub Pages
+        id: deployment
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
