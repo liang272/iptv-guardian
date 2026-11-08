@@ -1,0 +1,13 @@
+#EXTM3U
+# TVB 翡翠台补充源（可直接编辑本文件，订阅地址不变）
+# 说明：以下地址来自社区公开分享的直播源，授权状态请自行确认，
+# 仅用于个人学习与家庭自建，勿公开分发。
+# 海外探测节点通常连不上国内地址（记为 unknown，不判失效、不删频道），
+# 国内网络可能可用。地址失效时直接替换下面的 URL 即可。
+# 也可以按同样格式继续追加其它已获授权的频道：
+#   #EXTINF:-1 tvg-id="频道ID" group-title="分组",中文台名
+#   https://你的地址/index.m3u8
+#EXTINF:-1 tvg-id="Jade.hk@SD" group-title="中国香港",TVB 翡翠台
+http://27.46.95.90:800/hls/1789773363/index.m3u8
+#EXTINF:-1 tvg-id="Jade.hk@SD" group-title="中国香港",TVB 翡翠台
+http://43.251.102.18:4000/play/a00g

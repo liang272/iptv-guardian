@@ -44,6 +44,7 @@ STATE = os.path.join(ROOT, 'state.json')
 OUT_M3U = os.path.join(ROOT, 'docs', 'live.m3u')
 OUT_HEALTHY = os.path.join(ROOT, 'docs', 'healthy.m3u')
 OUT_STATUS = os.path.join(ROOT, 'docs', 'status.json')
+NAMES = os.path.join(ROOT, 'names_zh.json')
 
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36')
@@ -54,6 +55,28 @@ STALE = float(os.environ.get('STALE_SECONDS', '0'))  # 0 = 每轮全量复检
 STATUS_INTERVAL = float(os.environ.get('STATUS_INTERVAL', '1800'))
 MAX_CANDIDATES = int(os.environ.get('MAX_CANDIDATES', '10'))
 ORDER = ['大陆', '中国香港', '中国澳门', '中国台湾', '华语', '其他']
+
+# 全量中文台名映射（names_zh.json）；缺失时用兜底规则生成中文名
+try:
+    with open(NAMES, 'r', encoding='utf-8') as _f:
+        NAME_ZH = json.load(_f)
+except Exception:
+    NAME_ZH = {}
+
+_SUBS = [
+    (r'\bSatellite TV\b', '卫视'), (r'\bNews Channel\b', '新闻频道'),
+    (r'\bMovie Channel\b', '电影频道'), (r'\bSports\b', '体育'),
+    (r'\bChildren\'?s?\b', '少儿'), (r'\bComprehensive\b', '综合'),
+    (r'\bInternational\b', '国际'), (r'\bEntertainment\b', '娱乐'),
+    (r'\bInformation\b', '资讯'), (r'\bDocumentary\b', '纪录'),
+    (r'\bEconomy\b', '经济'), (r'\bEducation\b', '教育'),
+    (r'\bScience\b', '科教'), (r'\bCulture\b', '文化'),
+    (r'\bVariety\b', '综艺'), (r'\bTravel\b', '旅游'),
+    (r'\bShopping\b', '购物'), (r'\bCartoon\b', '卡通'),
+    (r'\bPublic\b', '公共'), (r'\bLife\b', '生活'),
+    (r'\bNews\b', '新闻'), (r'\bMovie\b', '电影'),
+    (r'\bChannel\b', '频道'), (r'\bTV\b', '电视台'),
+]
 
 ATTR_RE = re.compile(r'''([A-Za-z0-9_.:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s,]+))''')
 
@@ -206,6 +229,23 @@ def load_json(path, default):
         return default
 
 
+def fallback_zh(name: str) -> str:
+    """未收录频道：去掉画质/标记，把常见英文词换成中文，保证输出仍是中文名。"""
+    s = re.sub(r'\[[^\]]*\]|\([^)]*\)', '', name or '')
+    s = re.sub(r'\b(HD|SD|FHD|UHD|4K|8K|\d+p|\d+i)\b', '', s, flags=re.I)
+    for pat, zh in _SUBS:
+        s = re.sub(pat, zh, s, flags=re.I)
+    s = re.sub(r'\s+', ' ', s).strip(' -·|,')
+    if not re.search(r'[\u4e00-\u9fff]', s):
+        s = '海外频道·' + (s or '未命名')
+    return s or '未命名频道'
+
+
+def zh_name(c) -> str:
+    k = key_of(c.get('tvg_id', ''), c.get('name', ''))
+    return NAME_ZH.get(k) or fallback_zh(c.get('name', ''))
+
+
 def render(chans, updated_iso, healthy_only=False):
     lines = ['#EXTM3U',
              f'# 自动维护：{updated_iso}',
@@ -219,12 +259,13 @@ def render(chans, updated_iso, healthy_only=False):
         if healthy_only and bad:
             continue
         group = ('待修复·' + c['group']) if bad else c['group']
+        name = zh_name(c)
         attrs = [f'tvg-id="{c.get("tvg_id") or c["key"]}"',
-                 f'tvg-name="{c["name"]}"']
+                 f'tvg-name="{name}"']
         if c.get('logo'):
             attrs.append(f'tvg-logo="{c["logo"]}"')
         attrs.append(f'group-title="{group}"')
-        lines.append(f'#EXTINF:-1 {" ".join(attrs)},{c["name"]}')
+        lines.append(f'#EXTINF:-1 {" ".join(attrs)},{name}')
         lines.append(c['active'])
     return '\r\n'.join(lines) + '\r\n'
 
@@ -238,8 +279,18 @@ def main():
     health_before = {k: bool(c.get('healthy', True)) for k, c in channels.items()}
 
     def pull(src):
+        u = src.get('url', '')
+        # 可编辑的仓库内本地源：url 写成 "custom.m3u" 或 "file:custom.m3u"
+        if u.startswith('file:') or not u.startswith(('http://', 'https://')):
+            rel = u.split(':', 1)[-1] if u.startswith('file:') else u
+            try:
+                with open(os.path.join(ROOT, rel.lstrip('/')), 'r', encoding='utf-8') as f:
+                    return src, f.read()
+            except Exception as ex:
+                print(f"[warn] 本地源 {src.get('name')} 读取失败: {type(ex).__name__}")
+                return src, None
         try:
-            return src, fetch(src['url'])
+            return src, fetch(u)
         except Exception as ex:
             print(f"[warn] 上游 {src.get('name')} 拉取失败: {type(ex).__name__}")
             return src, None
@@ -301,7 +352,7 @@ def main():
             ch['healthy'] = False
             ch['last_check'] = now
             state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{ch['name']}] 确认失效但无备用地址，保留原地址并标记待修复"})
+                {'t': now, 'msg': f"[{zh_name(ch)}] 确认失效但无备用地址，保留原地址并标记待修复"})
             continue
         with ThreadPoolExecutor(max_workers=min(6, len(pool))) as ex:
             futs = {ex.submit(probe, c): c for c in pool}
@@ -311,8 +362,13 @@ def main():
                     cand_res[futs[f]['url']] = f.result()
                 except Exception:
                     cand_res[futs[f]['url']] = {'ok': None}
-        ok = [c for c in pool if cand_res[c['url']]['ok'] is True]
-        ok.sort(key=lambda c: cand_res[c['url']].get('latency_ms', 99999))
+        # 可用源优先；「网络不确定」也接受（海外探测不到国内源，不代表用户端看不了）
+        good = [c for c in pool if cand_res[c['url']]['ok'] is True]
+        uncertain = [c for c in pool if cand_res[c['url']]['ok'] is None]
+        by_latency = lambda c: cand_res[c['url']].get('latency_ms', 99999)
+        good.sort(key=by_latency)
+        uncertain.sort(key=by_latency)
+        ok = good + uncertain
         if ok:
             ch['active'] = ok[0]['url']
             ch['healthy'] = True
@@ -320,11 +376,11 @@ def main():
             ch['switches'] = ch.get('switches', 0) + 1
             healed += 1
             state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{ch['name']}] 已单独替换失效地址（第 {ch['switches']} 次）"})
+                {'t': now, 'msg': f"[{zh_name(ch)}] 已单独替换失效地址（第 {ch['switches']} 次）"})
         else:
             ch['healthy'] = False
             state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{ch['name']}] 备用池 {len(pool)} 个地址均不可用，标记待修复"})
+                {'t': now, 'msg': f"[{zh_name(ch)}] 备用池 {len(pool)} 个地址均不可用，标记待修复"})
         ch['last_check'] = now
 
     for k, r in results.items():
