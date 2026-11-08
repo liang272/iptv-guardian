@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T15:06:48.751875+00:00
+# 自动维护：2026-11-08T15:41:58.410970+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -202,6 +202,8 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
 http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 #EXTINF:-1 tvg-id="SipingTV.cn@SD" tvg-name="四平电视台" group-title="大陆",四平电视台
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
+#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" group-title="大陆",金砖国家电视中文频道
+https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TianjinTV.cn@SD" tvg-name="天津卫视" group-title="大陆",天津卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
 #EXTINF:-1 tvg-id="VoATVChina.cn@SD" tvg-name="美国之音中文电视" group-title="大陆",美国之音中文电视
@@ -269,7 +271,7 @@ https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8
 #EXTINF:-1 tvg-id="TDMMacauSatellite.mo@SD" tvg-name="澳门卫星台" group-title="中国澳门",澳门卫星台
 https://live3.tdm.com.mo/ch3/ch3.live/playlist.m3u8
 #EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-name="AXN 亚洲(中国台湾)" group-title="中国台湾",AXN 亚洲(中国台湾)
-http://202.150.165.66:8088/play/301-AXN/index.m3u8
+http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 tvg-id="AnimaxAsia.sg@Taiwan" tvg-name="Animax 亚洲(中国台湾)" group-title="中国台湾",Animax 亚洲(中国台湾)
 https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="BeautifulLifeTV.tw@SD" tvg-name="美丽人生电视" group-title="中国台湾",美丽人生电视
@@ -370,8 +372,6 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
-#EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
-https://ntd02.akamaized.net/HD-LA/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/mllive860/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)

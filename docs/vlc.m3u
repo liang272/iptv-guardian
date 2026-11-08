@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T15:06:48.751875+00:00
+# 自动维护：2026-11-08T15:41:58.410970+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -401,6 +401,10 @@ http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
+#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" tvg-logo="https://i.imgur.com/896132Z.png" group-title="大陆",金砖国家电视中文频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TianjinTV.cn@SD" tvg-name="天津卫视" tvg-logo="https://i.imgur.com/Bg24eaH.png" group-title="大陆",天津卫视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -536,7 +540,7 @@ https://live3.tdm.com.mo/ch3/ch3.live/playlist.m3u8
 #EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-name="AXN 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="中国台湾",AXN 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://202.150.165.66:8088/play/301-AXN/index.m3u8
+http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 tvg-id="AnimaxAsia.sg@Taiwan" tvg-name="Animax 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png" group-title="中国台湾",Animax 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -737,10 +741,6 @@ https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://103.154.3.101:5001/live/1736.m3u8
-#EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTD_Logo_with_symbol.svg/960px-NTD_Logo_with_symbol.svg.png" group-title="华语",新唐人电视(美东)
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://ntd02.akamaized.net/HD-LA/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" tvg-logo="https://i.imgur.com/iyFXcDy.png" group-title="华语",新唐人电视(加拿大)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -873,10 +873,6 @@ http://livealone302.iqilu.com/iqilu/zypd.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://livepull-tcms.sztv.com.cn/live/sz4Kpgm.m3u8
-#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" tvg-logo="https://i.imgur.com/896132Z.png" group-title="待修复·大陆",金砖国家电视中文频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TonghuaTV.cn@SD" tvg-name="通化电视台" tvg-logo="https://www.tvchinese.net/uploads/tv/thtv1.jpg" group-title="待修复·大陆",通化电视台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -941,6 +937,10 @@ http://cdn6.163189.xyz/163189/8tv
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://reflect-creatv.cablecast.tv/live-13/live/live.m3u8
+#EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTD_Logo_with_symbol.svg/960px-NTD_Logo_with_symbol.svg.png" group-title="待修复·华语",新唐人电视(美东)
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://ntd02.akamaized.net/HD-LA/index.m3u8
 #EXTINF:-1 tvg-id="TechStorm.sg@SD" tvg-name="TechStorm 科技频道" tvg-logo="https://i.imgur.com/fAprFBJ.png" group-title="待修复·华语",TechStorm 科技频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
