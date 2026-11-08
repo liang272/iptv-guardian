@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T20:55:50.396298+00:00
+# 自动维护：2026-11-08T21:29:45.576280+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -532,7 +532,7 @@ https://live3.tdm.com.mo/ch3/ch3.live/playlist.m3u8
 #EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-name="AXN 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="中国台湾",AXN 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://202.150.165.66:8088/play/301-AXN/index.m3u8
+http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 tvg-id="AnimaxAsia.sg@Taiwan" tvg-name="Animax 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png" group-title="中国台湾",Animax 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
