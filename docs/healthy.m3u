@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-08T00:39:02.369757+00:00
+# 自动维护：2026-11-08T00:42:36.715381+00:00
 # 固定地址，后台只替换失效频道的源，订阅 URL 永不改变
 # 纯净版：只保留未确认失效的频道
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
@@ -20,9 +20,9 @@ http://ivi.bupt.edu.cn/hls/btv1.m3u8
 http://112.25.48.68/live/program/live/btws/1300000/mnf.m3u8
 #EXTINF:-1 tvg-id="BreadTV.cn@SD" tvg-name="面包电视台" tvg-logo="https://bread-tv.com/uploads/allimg/241202/9_1836542371.png" group-title="大陆",面包电视台
 https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
-#EXTINF:-1 tvg-id="CCTVPlus1.cn@SD" tvg-name="CCTV+ 1" tvg-logo="https://i.imgur.com/U8d4Is6.png" group-title="大陆",CCTV+ 1
+#EXTINF:-1 tvg-id="CCTVPlus1.cn@SD" tvg-name="CCTV+ 1 频道" tvg-logo="https://i.imgur.com/U8d4Is6.png" group-title="大陆",CCTV+ 1 频道
 https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="CCTVPlus2.cn@SD" tvg-name="CCTV+ 2" tvg-logo="https://i.imgur.com/qSg862A.png" group-title="大陆",CCTV+ 2
+#EXTINF:-1 tvg-id="CCTVPlus2.cn@SD" tvg-name="CCTV+ 2 频道" tvg-logo="https://i.imgur.com/qSg862A.png" group-title="大陆",CCTV+ 2 频道
 https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1 综合" tvg-logo="https://i.imgur.com/TpA3cUl.png" group-title="大陆",CCTV-1 综合
 http://74.91.26.218:82/live/cctv1hd.m3u8
@@ -128,8 +128,6 @@ https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594
 https://stream.hrbtv.net/yspd/playlist.m3u8
 #EXTINF:-1 tvg-id="HebeiTV.cn@SD" tvg-name="河北卫视" tvg-logo="https://i.imgur.com/Z5Ppzbi.png" group-title="大陆",河北卫视
 https://event.pull.hebtv.com/live/live101.m3u8
-#EXTINF:-1 tvg-id="HebiNewsChannel.cn@SD" tvg-name="鹤壁新闻频道" tvg-logo="https://i.imgur.com/Osw5yRW.png" group-title="大陆",鹤壁新闻频道
-http://pili-live-hls.hebitv.com/hebi/hebi.m3u8
 #EXTINF:-1 tvg-id="HeilongjiangTV.cn@SD" tvg-name="黑龙江卫视" tvg-logo="https://i.imgur.com/9fj1uba.png" group-title="大陆",黑龙江卫视
 http://223.110.245.161/ott.js.chinamobile.com/PLTV/3/224/3221227492/index.m3u8
 #EXTINF:-1 tvg-id="HezhengTV.cn@SD" tvg-name="和政电视台" tvg-logo="https://upload.wikimedia.org/wikipedia/zh/2/28/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png" group-title="大陆",和政电视台
@@ -250,7 +248,7 @@ https://petclub-samsungaus.amagi.tv/playlist.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-name="凤凰卫视资讯台" tvg-logo="https://i.imgur.com/mt4h3VO.png" group-title="中国香港",凤凰卫视资讯台
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-#EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ViuTV_logo.svg/960px-ViuTV_logo.svg.png" group-title="中国香港",ViuTV
+#EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ViuTV_logo.svg/960px-ViuTV_logo.svg.png" group-title="中国香港",ViuTV 综合台
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="CanalMacau.mo@SD" tvg-name="澳门有线电视" tvg-logo="https://i.imgur.com/oFPUZ97.png" group-title="中国澳门",澳门有线电视
 https://live3.tdm.com.mo/ch2/ch2.live/playlist.m3u8
@@ -302,7 +300,7 @@ https://live.streamingfast.net/osmflivech1.m3u8
 http://125.227.210.55:1003/VideoInput/play.ts
 #EXTINF:-1 tvg-id="HakkaTV.tw@SD" tvg-name="客家电视" tvg-logo="https://i.imgur.com/1CdGSbU.png" group-title="中国台湾",客家电视
 https://h5cul1yar48um3t.wcetv.com/hls/hakkatv.m3u8
-#EXTINF:-1 tvg-id="MOMOTV.tw@SD" tvg-name="MOMO TV" tvg-logo="https://m.momoshop.com.tw/img/message.png" group-title="中国台湾",MOMO TV
+#EXTINF:-1 tvg-id="MOMOTV.tw@SD" tvg-name="MOMO 综合台" tvg-logo="https://m.momoshop.com.tw/img/message.png" group-title="中国台湾",MOMO 综合台
 http://nmk.ioapk.com:5050/4gtv-live107/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVAsiaPacific.us@SD" tvg-name="新唐人亚太电视" tvg-logo="https://i.imgur.com/iyFXcDy.png" group-title="中国台湾",新唐人亚太电视
 https://live.ntdtv.com/aplive200/playlist.m3u8
@@ -320,7 +318,7 @@ http://162.19.247.76:22222/live/taishi/index.m3u8
 https://live.wcetv.com/hls/master-ttvnews.m3u8
 #EXTINF:-1 tvg-id="TVBSNews.tw@SD" tvg-name="TVBS 新闻" tvg-logo="https://i.imgur.com/171lwfg.png" group-title="中国台湾",TVBS 新闻
 http://seb.sason.top/sc/tvbsxw_fhd.m3u8
-#EXTINF:-1 tvg-id="TVBSAsia.tw@SD" tvg-name="TVBS-Asia" tvg-logo="https://i.imgur.com/4S1rkhm.png" group-title="中国台湾",TVBS-Asia
+#EXTINF:-1 tvg-id="TVBSAsia.tw@SD" tvg-name="TVBS 亚洲台" tvg-logo="https://i.imgur.com/4S1rkhm.png" group-title="中国台湾",TVBS 亚洲台
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
 #EXTINF:-1 tvg-id="TaiwanIndigenousTV.tw@SD" tvg-name="原住民族电视" tvg-logo="https://i.imgur.com/QqIdVqz.png" group-title="中国台湾",原住民族电视
 https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
@@ -367,7 +365,7 @@ https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playl
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" tvg-logo="https://i.imgur.com/24ehonx.png" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
 #EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTD_Logo_with_symbol.svg/960px-NTD_Logo_with_symbol.svg.png" group-title="华语",新唐人电视(美东)
-https://ntd02.akamaized.net/HD-LA/index.m3u8
+https://ntd02.akamaized.net/HD-NY/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" tvg-logo="https://i.imgur.com/iyFXcDy.png" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/mllive860/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" tvg-logo="https://i.imgur.com/OpWTWdh.png" group-title="华语",新唐人电视(中国)
