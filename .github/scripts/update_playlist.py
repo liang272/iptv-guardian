@@ -2,26 +2,35 @@
 """GitHub Actions 零运维方案：只替换失效频道的地址，固定 URL 永远不变。
 
 运行逻辑：
-  state.json（已提交到仓库）保存每个频道的当前地址 + 备用地址池；
+  state.json（已提交到仓库）保存每个频道的当前地址 + 备用地址池 + 质量统计；
   每次运行复检所有频道（最短周期由 workflow 的 cron 控制）；
-  某个频道失效时，从它的备用池里挑一个可用地址单独替换；
+  某个频道失效时，对备用池并发探测并按多维评分挑「最优」地址单独替换，且换后即时复验；
+  空闲时按轮转抽样对健康频道做「择优升级」，逐步把频道切到加载更快、更稳的源；
   最后重新生成 docs/live.m3u —— 文件名/URL 不变，播放器永远订阅同一个地址。
 
+候选池来源（全部需为已获合法授权或版权方主动公开的源）：
+  sources.json 里可配任意多个上游，支持 enabled / weight / merge_only；
+  sources.d/ 目录下的 .m3u / .txt 会被自动扫描并入（放置你自己有权使用的源）；
+  merge_only 的上游只补充已有频道的备用地址，不新增频道（用于大型聚合列表）。
+
 探测结果分三态（重要）：
-  ok=True   可用
+  ok=True   可用（已通过「播放列表有效 + 首分片有数据」的真实播放链路验证）
   ok=False  明确失效（HTTP 4xx/5xx、返回的不是播放列表、分片报错等）
   ok=None   不确定：连接超时/拒绝/DNS 失败。GitHub Actions 节点在海外，
             访问国内运营商内网源普遍不通，这不等于用户端失效，
             因此不判定失效、不换源、不降权、不删除频道。
 
+选源评分（越高越优）：加载延迟、首字节、首分片耗时、画质、历史成功率、
+连续失败、不确定次数、最近成功时间、上游权重。换源时只从通过验证的源里选最高分。
+
 输出：
   docs/live.m3u     全部频道，确认失效的排到末尾并标记「待修复」（主订阅地址，URL 不变）
   docs/healthy.m3u  只含未确认失效的频道（纯净版，可选订阅）
-  docs/status.json  巡检统计与换源日志
+  docs/status.json  巡检统计、质量概览与换源日志
 
 为避免高频周期产生大量无意义提交：
-  只有「新增频道 / 备用池变化 / 换源 / 健康状态翻转」才写 state.json 与播放列表；
-  status.json 按 STATUS_INTERVAL 节流写入（默认 30 分钟）。
+  只有「新增频道 / 备用池变化 / 换源 / 健康状态翻转 / 台名映射变化」才重写播放列表；
+  质量统计与状态看板按 STATUS_INTERVAL 节流落盘（默认 30 分钟）。
 
 仅使用 Python 标准库，无需安装依赖。
 """
@@ -40,6 +49,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES = os.path.join(ROOT, 'sources.json')
+SOURCES_DIR = os.path.join(ROOT, 'sources.d')
 STATE = os.path.join(ROOT, 'state.json')
 OUT_M3U = os.path.join(ROOT, 'docs', 'live.m3u')
 OUT_HEALTHY = os.path.join(ROOT, 'docs', 'healthy.m3u')
@@ -48,12 +58,18 @@ NAMES = os.path.join(ROOT, 'names_zh.json')
 
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36')
-TIMEOUT = float(os.environ.get('PROBE_TIMEOUT', '6'))
+TIMEOUT = float(os.environ.get('PROBE_TIMEOUT', '5'))
 FETCH_TIMEOUT = float(os.environ.get('FETCH_TIMEOUT', '10'))
-WORKERS = int(os.environ.get('PROBE_WORKERS', '16'))
+WORKERS = int(os.environ.get('PROBE_WORKERS', '24'))
 STALE = float(os.environ.get('STALE_SECONDS', '0'))  # 0 = 每轮全量复检
 STATUS_INTERVAL = float(os.environ.get('STATUS_INTERVAL', '1800'))
-MAX_CANDIDATES = int(os.environ.get('MAX_CANDIDATES', '10'))
+MAX_CANDIDATES = int(os.environ.get('MAX_CANDIDATES', '20'))
+NETWORK_CACHING = int(os.environ.get('NETWORK_CACHING', '1000'))
+# 持续择优：每轮抽样多少健康频道做候选池探测，单轮最多升级几个
+OPTIMIZE_SAMPLE = int(os.environ.get('OPTIMIZE_SAMPLE', '24'))
+OPTIMIZE_MAX = int(os.environ.get('OPTIMIZE_MAX', '8'))
+OPTIMIZE_GAIN = float(os.environ.get('OPTIMIZE_GAIN', '20'))
+MAX_POOL_PROBE = int(os.environ.get('MAX_POOL_PROBE', '6'))
 ORDER = ['大陆', '中国香港', '中国澳门', '中国台湾', '华语', '其他']
 
 # 全量中文台名映射（names_zh.json）；缺失时用兜底规则生成中文名
@@ -166,60 +182,160 @@ def fetch(url: str) -> str:
         return r.read().decode('utf-8', 'replace')
 
 
-def probe(item) -> dict:
-    """返回 {'ok': True/False/None, 'latency_ms':int, 'reason':str}。
+def _res(ok, reason, t0, **kw):
+    d = {'ok': ok, 'reason': reason, 'latency_ms': int((time.time() - t0) * 1000),
+         'ttfb_ms': 0, 'seg_ms': 0, 'quality': 0}
+    d.update(kw)
+    return d
 
-    None 表示「网络不可达，无法判定」——常见于海外节点访问国内内网源，
-    此时不应把频道判为失效。
+
+def quality_of(text: str, url: str) -> int:
+    """从 #EXT-X-STREAM-INF 的 RESOLUTION/BANDWIDTH 或 URL 标记推断画质 0~4。"""
+    head = text[:6000]
+    m = re.search(r'RESOLUTION\s*=\s*(\d{3,4})[xX\u00d7](\d{3,4})', head)
+    h = int(m.group(2)) if m else 0
+    if not h:
+        m2 = re.search(r'(2160|1080|720|576|480)[pi]?', (head + ' ' + url).lower())
+        h = int(m2.group(1)) if m2 else 0
+    if h >= 1080:
+        return 4
+    if h >= 720:
+        return 3
+    if h >= 576:
+        return 2
+    if h > 0:
+        return 1
+    bw = re.search(r'BANDWIDTH\s*=\s*(\d+)', head)
+    if bw and int(bw.group(1)) >= 3000000:
+        return 3
+    return 0
+
+
+def probe(item) -> dict:
+    """真实播放链路探测：拉播放列表 -> 校验 #EXTM3U -> 拉首分片并读数据。
+
+    返回 ok(True/False/None) + 延迟/首字节/首分片耗时/画质，作为选源评分依据。
+    None 表示「网络不可达，无法判定」——常见于海外节点访问国内内网源，不判失效。
     """
     url = item['url']
-    hdr = {'User-Agent': UA, 'Range': 'bytes=0-65535', 'Accept': '*/*'}
-    hdr.update(item.get('headers') or {})
+    uh = item.get('headers') or {}
+    hdr = {'User-Agent': UA, 'Range': 'bytes=0-32768', 'Accept': '*/*',
+           'Connection': 'close'}
+    hdr.update(uh)
     t0 = time.time()
     try:
         req = urllib.request.Request(url, headers=hdr)
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
             if r.status >= 400:
-                return {'ok': False, 'reason': f'HTTP {r.status}',
-                        'latency_ms': int((time.time() - t0) * 1000)}
-            data = r.read(65536)
+                return _res(False, 'HTTP %d' % r.status, t0)
+            data = r.read(32768)
+            ttfb = int((time.time() - t0) * 1000)
             final = r.geturl()
     except urllib.error.HTTPError as ex:
         # 明确的 HTTP 4xx/5xx：属于确认失效，不是网络不可达
-        return {'ok': False, 'reason': f'HTTP {ex.code}',
-                'latency_ms': int((time.time() - t0) * 1000)}
+        return _res(False, 'HTTP %d' % ex.code, t0)
     except Exception as ex:
-        return {'ok': None, 'reason': f'网络不可达: {type(ex).__name__}',
-                'latency_ms': int((time.time() - t0) * 1000)}
+        return _res(None, '网络不可达: %s' % type(ex).__name__, t0)
     latency = int((time.time() - t0) * 1000)
     text = data.decode('utf-8', 'replace')
+    quality = quality_of(text, url)
     if text.lstrip().startswith('#EXTM3U') or '.m3u8' in url.lower():
         if '#EXTM3U' not in text:
-            return {'ok': False, 'reason': '无效播放列表', 'latency_ms': latency}
+            return _res(False, '无效播放列表', t0, ttfb_ms=ttfb, quality=quality)
         seg = next((l.strip() for l in text.splitlines()
                     if l.strip() and not l.strip().startswith('#')), '')
+        seg_ms = 0
         if seg:
+            ts = time.time()
             try:
-                req2 = urllib.request.Request(urllib.parse.urljoin(final, seg),
-                                              headers={'User-Agent': UA,
-                                                       'Range': 'bytes=0-1024'})
+                h2 = {'User-Agent': UA, 'Range': 'bytes=0-1024',
+                      'Connection': 'close'}
+                for k, v in uh.items():
+                    if k.lower() in ('user-agent', 'referer'):
+                        h2[k] = v
+                req2 = urllib.request.Request(urllib.parse.urljoin(final, seg), headers=h2)
                 with urllib.request.urlopen(req2, timeout=TIMEOUT) as r2:
                     if r2.status >= 400:
-                        return {'ok': False, 'reason': '分片 HTTP 错误',
-                                'latency_ms': latency}
+                        return _res(False, '分片 HTTP 错误', t0, ttfb_ms=ttfb,
+                                    quality=quality)
                     if not r2.read(512):
-                        return {'ok': None, 'reason': '分片无数据（不确定）',
-                                'latency_ms': latency}
+                        return _res(None, '分片无数据（不确定）', t0, ttfb_ms=ttfb,
+                                    quality=quality)
+                seg_ms = int((time.time() - ts) * 1000)
             except urllib.error.HTTPError:
-                return {'ok': False, 'reason': '分片 HTTP 错误',
-                        'latency_ms': latency}
+                return _res(False, '分片 HTTP 错误', t0, ttfb_ms=ttfb, quality=quality)
             except Exception:
-                return {'ok': None, 'reason': '分片不可达（不确定）',
-                        'latency_ms': latency}
-        return {'ok': True, 'latency_ms': latency, 'reason': ''}
+                return _res(None, '分片不可达（不确定）', t0, ttfb_ms=ttfb,
+                            quality=quality)
+        return _res(True, '', t0, ttfb_ms=ttfb, seg_ms=seg_ms, quality=quality,
+                    latency_ms=latency)
     if text.lstrip().startswith('<') or len(data) < 128:
-        return {'ok': False, 'reason': '非视频数据', 'latency_ms': latency}
-    return {'ok': True, 'latency_ms': latency, 'reason': ''}
+        return _res(False, '非视频数据', t0, ttfb_ms=ttfb)
+    return _res(True, '', t0, ttfb_ms=ttfb, quality=quality, latency_ms=latency)
+
+
+def probe_many(items) -> dict:
+    """并发探测并按 URL 去重，返回 {url: result}。"""
+    uniq = {}
+    for it in items:
+        uniq.setdefault(it['url'], it)
+    out = {}
+    if not uniq:
+        return out
+    with ThreadPoolExecutor(max_workers=min(WORKERS, len(uniq))) as ex:
+        futs = {ex.submit(probe, it): u for u, it in uniq.items()}
+        for f in as_completed(futs):
+            u = futs[f]
+            try:
+                out[u] = f.result()
+            except Exception as ex:
+                out[u] = _res(None, str(ex)[:60], time.time())
+    return out
+
+
+def score_of(c: dict, r: dict, weight: float = 5.0, now: float = 0) -> float:
+    """候选源综合评分：加载越快、画质越好、历史越稳，分越高。"""
+    ok = r.get('ok')
+    if ok is False:
+        return -1000.0
+    lat = r.get('latency_ms') or 99999
+    ttfb = r.get('ttfb_ms') or lat
+    seg = r.get('seg_ms') or 0
+    s = 100.0
+    s -= min(40.0, lat / 25.0)                     # 加载延迟（核心）
+    s -= min(15.0, ttfb / 60.0)                    # 首字节
+    s -= min(15.0, seg / 60.0)                     # 首分片耗时
+    s -= min(30.0, c.get('consec_fail', 0) * 10)   # 连续失败
+    tot = c.get('ok', 0) + c.get('fail', 0)
+    if tot:
+        s -= min(25.0, 25.0 * c.get('fail', 0) / tot)   # 历史失败率
+    s -= min(12.0, c.get('unknown', 0) * 1.5)     # 不确定次数
+    if c.get('last_ok'):
+        s -= min(12.0, max(0.0, (now - c['last_ok']) / 3600.0))  # 陈旧
+    s += min(12.0, (r.get('quality') or 0) * 3.0)  # 画质
+    s += (weight - 5.0) * 1.5                      # 上游权重
+    if ok is None:
+        s -= 25.0                                  # 不确定降权，但仍可作为备选
+    else:
+        s += 5.0                                   # 明确通过验证
+    return s
+
+
+def update_stats(c: dict, r: dict):
+    """把本轮探测结果累计到候选的历史统计里。"""
+    ok = r.get('ok')
+    if ok is True:
+        c['ok'] = c.get('ok', 0) + 1
+        c['consec_fail'] = 0
+        c['last_ok'] = time.time()
+        lat = r.get('latency_ms') or 0
+        c['lat_ema'] = int((c.get('lat_ema') or lat) * 0.6 + lat * 0.4)
+        c['quality'] = max(c.get('quality', 0), r.get('quality') or 0)
+    elif ok is False:
+        c['fail'] = c.get('fail', 0) + 1
+        c['consec_fail'] = c.get('consec_fail', 0) + 1
+    else:
+        c['unknown'] = c.get('unknown', 0) + 1
 
 
 def load_json(path, default):
@@ -267,12 +383,36 @@ def render(chans, updated_iso, healthy_only=False):
             attrs.append(f'tvg-logo="{c["logo"]}"')
         attrs.append(f'group-title="{group}"')
         lines.append(f'#EXTINF:-1 {" ".join(attrs)},{name}')
+        # 播放器侧加载优化：断流自动重连、缩短起播缓冲、透传鉴权头
+        lines.append('#EXTVLCOPT:http-reconnect=true')
+        lines.append(f'#EXTVLCOPT:network-caching={NETWORK_CACHING}')
+        h = c.get('active_headers') or {}
+        if h.get('User-Agent'):
+            lines.append('#EXTVLCOPT:http-user-agent=' + h['User-Agent'])
+        if h.get('Referer'):
+            lines.append('#EXTVLCOPT:http-referrer=' + h['Referer'])
         lines.append(c['active'])
     return '\r\n'.join(lines) + '\r\n'
 
 
+def extra_sources() -> list:
+    """自动扫描 sources.d/ 下的自定义源（放置你自己有权使用的订阅）。"""
+    out = []
+    if not os.path.isdir(SOURCES_DIR):
+        return out
+    for fn in sorted(os.listdir(SOURCES_DIR)):
+        if fn.lower().endswith(('.m3u', '.m3u8', '.txt')):
+            out.append({'name': '自定义·' + fn, 'group': '',
+                        'url': 'file:sources.d/' + fn,
+                        'weight': float(os.environ.get('LOCAL_WEIGHT', '6')),
+                        'enabled': True})
+    return out
+
+
 def main():
-    sources = load_json(SOURCES, {'sources': []})['sources']
+    src_cfg = load_json(SOURCES, {'sources': []})
+    sources = [s for s in (src_cfg.get('sources') or []) if s.get('enabled', True)]
+    sources += extra_sources()
     state = load_json(STATE, {'channels': {}, 'log': []})
     channels = state.setdefault('channels', {})
     now = time.time()
@@ -297,117 +437,202 @@ def main():
             return src, None
 
     # 1) 并行拉取所有上游，把新地址补进备用池（不改动当前生效地址）
-    with ThreadPoolExecutor(max_workers=max(1, min(8, len(sources) or 1))) as ex:
+    with ThreadPoolExecutor(max_workers=max(1, min(10, len(sources) or 1))) as ex:
         pulled = list(ex.map(pull, sources))
     for src, text in pulled:
         if not text:
             continue
+        w = float(src.get('weight', 5))
         for e in parse(text, src.get('group', '')):
             k = key_of(e['tvg_id'], e['name'])
             ch = channels.get(k)
             if not ch:
+                if src.get('merge_only'):
+                    continue  # 大型聚合列表只补候选，避免频道数失控
                 ch = {'key': k, 'name': e['name'], 'tvg_id': e['tvg_id'],
                       'logo': e['logo'], 'group': src.get('group') or e['group'],
-                      'active': e['url'], 'candidates': [], 'switches': 0,
-                      'last_check': 0, 'last_ok': 0, 'healthy': True}
+                      'active': e['url'], 'active_headers': e['headers'],
+                      'candidates': [], 'switches': 0, 'last_check': 0,
+                      'last_ok': 0, 'healthy': True, 'prev_active': ''}
                 channels[k] = ch
                 added += 1
             if not ch.get('active'):
                 ch['active'] = e['url']
+                ch['active_headers'] = e['headers']
             urls = {c['url'] for c in ch['candidates']}
             if e['url'] not in urls:
                 ch['candidates'].append({'url': e['url'], 'headers': e['headers'],
-                                         'fails': 0})
+                                         'weight': w, 'ok': 0, 'fail': 0,
+                                         'unknown': 0, 'consec_fail': 0,
+                                         'lat_ema': 0, 'quality': 0, 'last_ok': 0})
                 pool_added += 1
+            else:
+                for c in ch['candidates']:
+                    if c['url'] == e['url']:
+                        c['weight'] = max(c.get('weight', 5), w)
+                        if e['headers']:
+                            c['headers'] = e['headers']
+                        break
             if len(ch['candidates']) > MAX_CANDIDATES:
-                keep = [c for c in ch['candidates'] if c['url'] == ch['active']]
-                ch['candidates'] = (keep + [c for c in ch['candidates']
-                                            if c['url'] != ch['active']][:MAX_CANDIDATES - 1])
+                act = ch['active']
+                ranked = sorted(ch['candidates'],
+                                key=lambda c: (c['url'] == act,
+                                               c.get('ok', 0) - c.get('fail', 0),
+                                               -c.get('lat_ema', 99999)),
+                                reverse=True)
+                ch['candidates'] = ranked[:MAX_CANDIDATES]
 
-    # 2) 每轮全量复检（STALE=0 对应最短检测周期）
+    def item_of(c):
+        return {'url': c['url'], 'headers': c.get('headers') or {}}
+
+    def find_cand(ch, url):
+        return next((c for c in ch['candidates'] if c['url'] == url), None)
+
+    # 2) 每轮全量复检 active（URL 去重后并发探测，明显缩短单轮耗时）
     todo = [ch for ch in channels.values()
             if now - ch.get('last_check', 0) > STALE or not ch.get('healthy', True)]
     print(f"频道总数 {len(channels)}，本次需复检 {len(todo)} 个")
-    results = {}
-    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        futs = {ex.submit(probe, {'url': ch['active'],
-                                  'headers': next((c['headers'] for c in ch['candidates']
-                                                   if c['url'] == ch['active']), {})}): ch['key']
-                for ch in todo}
-        for f in as_completed(futs):
-            try:
-                results[futs[f]] = f.result()
-            except Exception as ex:
-                results[futs[f]] = {'ok': None, 'reason': str(ex)[:60], 'latency_ms': 0}
+    act_items = [{'url': ch['active'],
+                  'headers': (ch.get('active_headers')
+                              or (find_cand(ch, ch['active']) or {}).get('headers')
+                              or {})} for ch in todo]
+    url_res = probe_many(act_items)
+    results = {ch['key']: url_res.get(ch['active'], _res(None, '未探测', now))
+               for ch in todo}
 
     dead = [k for k, r in results.items() if r['ok'] is False]
     unknown = [k for k, r in results.items() if r['ok'] is None]
     print(f"确认失效 {len(dead)} 个，网络不确定 {len(unknown)} 个（不判失效、保留原地址）")
 
-    # 3) 对确认失效的频道：从备用池挑一个可用地址单独替换（其它频道完全不动）
-    healed = 0
+    # 更新 active 对应候选的统计
+    for k, r in results.items():
+        ch = channels[k]
+        c = find_cand(ch, ch['active'])
+        if c:
+            update_stats(c, r)
+
+    healed = optimized = rollback = 0
+
+    def switch_to(ch, cand, label):
+        nonlocal healed, optimized
+        prev = ch['active']
+        ch['active'] = cand['url']
+        ch['active_headers'] = cand.get('headers') or {}
+        ch['prev_active'] = prev
+        ch['healthy'] = True
+        ch['last_ok'] = now
+        ch['last_check'] = now
+        ch['switches'] = ch.get('switches', 0) + 1
+        if label == 'heal':
+            healed += 1
+            msg = f"[{zh_name(ch)}] 单独替换失效地址（第 {ch['switches']} 次，评分择优）"
+        else:
+            optimized += 1
+            msg = (f"[{zh_name(ch)}] 择优升级到更快/更稳的源"
+                   f"（第 {ch['switches']} 次）")
+        state.setdefault('log', []).append({'t': now, 'msg': msg})
+        return True
+
+    # 3) 对确认失效的频道：探测备用池 -> 按评分选最优 -> 换后即时复验
     for k in dead:
         ch = channels[k]
-        pool = [c for c in ch['candidates'] if c['url'] != ch['active']]
-        if not pool:
-            ch['healthy'] = False
-            ch['last_check'] = now
-            state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{zh_name(ch)}] 确认失效但无备用地址，保留原地址并标记待修复"})
+        pool = [c for c in ch['candidates']
+                if c['url'] != ch['active']][:MAX_POOL_PROBE]
+        chosen = None
+        if pool:
+            cres = probe_many([item_of(c) for c in pool])
+            for c in pool:
+                update_stats(c, cres.get(c['url'], _res(None, '未探测', now)))
+            ranked = sorted(
+                pool,
+                key=lambda c: score_of(c, cres.get(c['url'], {}),
+                                       c.get('weight', 5), now),
+                reverse=True)
+            for cand in ranked:
+                r = cres.get(cand['url'], {})
+                if r.get('ok') is False:
+                    break  # 后面的分数更低，无需再看
+                # 换源后即时复验，确保新地址真的能播
+                verify = probe(item_of(cand))
+                if verify['ok'] is not False:
+                    chosen = cand
+                    break
+        if chosen:
+            switch_to(ch, chosen, 'heal')
             continue
-        with ThreadPoolExecutor(max_workers=min(6, len(pool))) as ex:
-            futs = {ex.submit(probe, c): c for c in pool}
-            cand_res = {}
-            for f in as_completed(futs):
-                try:
-                    cand_res[futs[f]['url']] = f.result()
-                except Exception:
-                    cand_res[futs[f]['url']] = {'ok': None}
-        # 可用源优先；「网络不确定」也接受（海外探测不到国内源，不代表用户端看不了）
-        good = [c for c in pool if cand_res[c['url']]['ok'] is True]
-        uncertain = [c for c in pool if cand_res[c['url']]['ok'] is None]
-        by_latency = lambda c: cand_res[c['url']].get('latency_ms', 99999)
-        good.sort(key=by_latency)
-        uncertain.sort(key=by_latency)
-        ok = good + uncertain
-        if ok:
-            ch['active'] = ok[0]['url']
-            ch['healthy'] = True
-            ch['last_ok'] = now
-            ch['switches'] = ch.get('switches', 0) + 1
-            healed += 1
-            state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{zh_name(ch)}] 已单独替换失效地址（第 {ch['switches']} 次）"})
-        else:
-            ch['healthy'] = False
-            state.setdefault('log', []).append(
-                {'t': now, 'msg': f"[{zh_name(ch)}] 备用池 {len(pool)} 个地址均不可用，标记待修复"})
+        # 所有候选都不可用：尝试回滚到上一个已验证可用的地址
+        prev = ch.get('prev_active')
+        if prev and prev != ch['active']:
+            pv = probe({'url': prev, 'headers': ch.get('active_headers') or {}})
+            if pv['ok'] is not False:
+                cand = find_cand(ch, prev) or {'url': prev, 'headers': {}}
+                switch_to(ch, cand, 'heal')
+                rollback += 1
+                state['log'][-1]['msg'] += '（回滚历史可用源）'
+                continue
+        ch['healthy'] = False
         ch['last_check'] = now
+        state.setdefault('log', []).append(
+            {'t': now, 'msg': f"[{zh_name(ch)}] 备用池 {len(pool)} 个地址均不可用，标记待修复"})
 
     for k, r in results.items():
         ch = channels[k]
         if r['ok'] is None:
-            # 探测节点不可达，不代表用户端失效：保留原地址与健康状态
-            ch['last_check'] = now
+            ch['last_check'] = now   # 探测节点不可达，保留原地址与健康状态
         elif r['ok'] is True:
             ch['healthy'] = True
             ch['last_check'] = now
             ch['last_ok'] = now
 
+    # 4) 持续择优：轮转抽样健康频道，若备用池里有明显更优的源则主动升级
+    healthy_keys = [k for k, ch in channels.items()
+                    if ch.get('healthy', True) and len(ch['candidates']) > 1
+                    and results.get(k, {}).get('ok') is True]
+    healthy_keys.sort()
+    cursor = int(state.get('opt_cursor', 0))
+    sample = []
+    if healthy_keys and OPTIMIZE_SAMPLE > 0:
+        for i in range(min(OPTIMIZE_SAMPLE, len(healthy_keys))):
+            sample.append(healthy_keys[(cursor + i) % len(healthy_keys)])
+        state['opt_cursor'] = (cursor + len(sample)) % len(healthy_keys)
+    for k in sample:
+        if optimized >= OPTIMIZE_MAX:
+            break
+        ch = channels[k]
+        cur_res = results.get(k, {})
+        cur_cand = find_cand(ch, ch['active']) or {}
+        cur_score = score_of(cur_cand, cur_res, cur_cand.get('weight', 5), now)
+        pool = [c for c in ch['candidates']
+                if c['url'] != ch['active']][:MAX_POOL_PROBE]
+        if not pool:
+            continue
+        cres = probe_many([item_of(c) for c in pool])
+        for c in pool:
+            update_stats(c, cres.get(c['url'], _res(None, '未探测', now)))
+        best, best_score = None, cur_score + OPTIMIZE_GAIN
+        for c in pool:
+            r = cres.get(c['url'], {})
+            if r.get('ok') is not True:   # 择优只接受明确验证通过的源
+                continue
+            sc = score_of(c, r, c.get('weight', 5), now)
+            if sc > best_score:
+                best, best_score = c, sc
+        if best:
+            switch_to(ch, best, 'optimize')
+
     state['log'] = state.get('log', [])[-100:]
     updated_iso = datetime.now(timezone.utc).isoformat()
 
-    # 4) 幂等写入：只有实质变化才更新播放列表与 state，避免高频周期刷屏提交
+    # 5) 幂等写入：只有实质变化才重写播放列表；统计与看板按节流落盘
     flipped = any(bool(c.get('healthy', True)) != health_before.get(k, True)
                   for k, c in channels.items())
-    # 台名映射表改动也要触发播放列表重写（否则改了中文名线上不刷新）
     names_changed = state.get('names_hash') != NAMES_HASH
-    dirty = bool(added or pool_added or healed or flipped or names_changed)
+    dirty = bool(added or pool_added or healed or optimized or rollback
+                 or flipped or names_changed)
     first_run = not (os.path.exists(OUT_M3U) and os.path.exists(STATE))
     write_all = dirty or first_run
 
     os.makedirs(os.path.dirname(OUT_M3U), exist_ok=True)
-    # 健康/不确定频道在前，确认失效的排到末尾并标记「待修复」
     chans = sorted(channels.values(),
                    key=lambda c: (0 if c.get('healthy', True) else 1,
                                   ORDER.index(c['group']) if c['group'] in ORDER else 99,
@@ -419,31 +644,45 @@ def main():
             f.write(render(chans, updated_iso))
         with open(OUT_HEALTHY, 'w', encoding='utf-8', newline='') as f:
             f.write(render(chans, updated_iso, healthy_only=True))
-        with open(STATE, 'w', encoding='utf-8') as f:
-            json.dump(state, f, ensure_ascii=False, indent=1)
-        print(f"已更新 docs/live.m3u（{len(chans)} 频道）与 docs/healthy.m3u")
-    else:
-        print("本轮无实质变化：订阅文件内容保持不变，不产生提交")
 
     prev = load_json(OUT_STATUS, {})
     prev_ts = float(prev.get('_ts', 0) or 0)
     status_due = (not os.path.exists(OUT_STATUS) or dirty or first_run
                   or now - prev_ts >= STATUS_INTERVAL)
+    # state.json 与看板同节拍落盘，避免每 5 分钟刷一次提交
+    if write_all or status_due:
+        with open(STATE, 'w', encoding='utf-8') as f:
+            json.dump(state, f, ensure_ascii=False, indent=1)
+    if write_all:
+        print(f"已更新 docs/live.m3u（{len(chans)} 频道）与 docs/healthy.m3u")
+    else:
+        print("本轮无实质变化：订阅文件内容保持不变，不产生提交")
+
     if status_due:
         healthy = sum(1 for c in channels.values() if c.get('healthy'))
+        lats = [r['latency_ms'] for r in results.values() if r['ok'] is True]
+        lats.sort()
+        total_cand = sum(len(c['candidates']) for c in channels.values())
+        multi = sum(1 for c in channels.values() if len(c['candidates']) > 1)
         with open(OUT_STATUS, 'w', encoding='utf-8') as f:
             json.dump({'channels': len(channels), 'checked': len(todo),
                        'healthy': healthy, 'dead': len(dead), 'unknown': len(unknown),
-                       'healed': healed,
+                       'healed': healed, 'optimized': optimized, 'rollback': rollback,
                        'pending_fix': sum(1 for c in channels.values()
                                           if not c.get('healthy')),
+                       'candidates_total': total_cand,
+                       'multi_candidate_channels': multi,
+                       'avg_candidates': round(total_cand / max(1, len(channels)), 2),
+                       'median_latency_ms': lats[len(lats) // 2] if lats else 0,
                        'note': 'unknown=探测节点网络不可达，不等于用户端失效；此类频道保留原地址',
+                       'scoring': '换源按延迟/首分片/画质/历史成功率/上游权重综合评分选最优，换后即时复验',
                        'interval': '每 5 分钟（GitHub Actions 允许的最短周期）',
                        'updated': updated_iso,
                        'log': state['log'][-20:][::-1], '_ts': now},
                       f, ensure_ascii=False, indent=2)
     print(f"完成：新增 {added} 频道，新增备用 {pool_added}，复检 {len(todo)}，"
-          f"确认失效 {len(dead)}，不确定 {len(unknown)}，换源 {healed}，实质变化={dirty}")
+          f"确认失效 {len(dead)}，不确定 {len(unknown)}，换源 {healed}，"
+          f"择优升级 {optimized}，回滚 {rollback}，实质变化={dirty}")
 
 
 if __name__ == '__main__':

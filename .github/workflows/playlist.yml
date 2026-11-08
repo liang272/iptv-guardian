@@ -9,6 +9,9 @@ on:
   push:
     paths:
       - 'sources.json'
+      - 'sources.d/**'
+      - 'names_zh.json'
+      - 'custom.m3u'
       - '.github/scripts/update_playlist.py'
       - '.github/workflows/playlist.yml'
 
@@ -39,14 +42,23 @@ jobs:
 
       - name: 全量检测失效并单独替换失效频道
         env:
-          PROBE_TIMEOUT: '6'
-          FETCH_TIMEOUT: '10'
-          PROBE_WORKERS: '16'
+          PROBE_TIMEOUT: '5'
+          FETCH_TIMEOUT: '12'
+          PROBE_WORKERS: '24'
           # 0 = 每轮全量复检（最短检测周期）
           STALE_SECONDS: '0'
           # 状态看板心跳间隔（秒），避免每 5 分钟刷一次提交
           STATUS_INTERVAL: '1800'
-          MAX_CANDIDATES: '10'
+          # 每个频道最多保留多少个备用地址
+          MAX_CANDIDATES: '20'
+          # 播放器起播缓冲（毫秒），越小起播越快
+          NETWORK_CACHING: '1000'
+          # 持续择优：每轮抽样多少健康频道、单轮最多升级几个、评分差阈值
+          OPTIMIZE_SAMPLE: '24'
+          OPTIMIZE_MAX: '8'
+          OPTIMIZE_GAIN: '20'
+          # 单次换源最多并发探测几个备用地址
+          MAX_POOL_PROBE: '6'
         run: python .github/scripts/update_playlist.py
 
       - name: 提交结果（地址不变，只更新内容）

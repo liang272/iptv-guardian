@@ -1,10 +1,11 @@
 {
   "sources": [
-    {"name": "iptv-org 中国大陆", "group": "大陆", "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"},
-    {"name": "iptv-org 中国香港", "group": "中国香港", "url": "https://iptv-org.github.io/iptv/countries/hk.m3u"},
-    {"name": "iptv-org 中国澳门", "group": "中国澳门", "url": "https://iptv-org.github.io/iptv/countries/mo.m3u"},
-    {"name": "iptv-org 中国台湾", "group": "中国台湾", "url": "https://iptv-org.github.io/iptv/countries/tw.m3u"},
-    {"name": "iptv-org 华语频道", "group": "华语", "url": "https://iptv-org.github.io/iptv/languages/zho.m3u"},
-    {"name": "TVB 翡翠台补充源（可编辑）", "group": "中国香港", "url": "custom.m3u"}
+    {"name": "iptv-org 中国大陆", "group": "大陆", "weight": 6, "enabled": true, "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"},
+    {"name": "iptv-org 中国香港", "group": "中国香港", "weight": 6, "enabled": true, "url": "https://iptv-org.github.io/iptv/countries/hk.m3u"},
+    {"name": "iptv-org 中国澳门", "group": "中国澳门", "weight": 6, "enabled": true, "url": "https://iptv-org.github.io/iptv/countries/mo.m3u"},
+    {"name": "iptv-org 中国台湾", "group": "中国台湾", "weight": 6, "enabled": true, "url": "https://iptv-org.github.io/iptv/countries/tw.m3u"},
+    {"name": "iptv-org 华语频道", "group": "华语", "weight": 5, "enabled": true, "url": "https://iptv-org.github.io/iptv/languages/zho.m3u"},
+    {"name": "iptv-org 全量（仅补候选）", "group": "华语", "weight": 3, "enabled": true, "merge_only": true, "url": "https://iptv-org.github.io/iptv/index.m3u"},
+    {"name": "TVB 翡翠台补充源（可编辑）", "group": "中国香港", "weight": 7, "enabled": true, "url": "custom.m3u"}
   ]
 }
