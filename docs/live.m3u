@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-09T12:24:32.866666+00:00
+# 自动维护：2026-11-09T13:45:11.255771+00:00
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
 https://mediaserver.abnvideos.com/streams/abnchina.m3u8
@@ -77,6 +77,8 @@ http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub
 http://38.75.136.137:98/gslb/dsdqpub/gfjs.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="CCTVWomensFashion.cn@SD" tvg-name="CCTV 女性时尚" group-title="大陆",CCTV 女性时尚
 http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8?auth=testpub
+#EXTINF:-1 tvg-id="CCTVWorldGeography.cn@SD" tvg-name="CCTV 世界地理" group-title="大陆",CCTV 世界地理
+http://38.75.136.137:98/gslb/dsdqpub/sjdl.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="CETV1.cn@SD" tvg-name="中国教育台-1" group-title="大陆",中国教育台-1
 http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
 #EXTINF:-1 tvg-id="CETV2.cn@SD" tvg-name="中国教育台-2" group-title="大陆",中国教育台-2
@@ -251,6 +253,8 @@ https://petclub-samsungaus.amagi.tv/playlist.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-name="凤凰卫视资讯台" group-title="中国香港",凤凰卫视资讯台
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="中国香港",港台电视31
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" group-title="中国香港",ViuTV 综合台
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="CanalMacau.mo@SD" tvg-name="澳门有线电视" group-title="中国澳门",澳门有线电视
@@ -389,8 +393,6 @@ http://74.91.26.218:82/live/cctv16hd.m3u8
 http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV5Plus.cn@SD" tvg-name="CCTV-5+ 体育赛事" group-title="待修复·大陆",CCTV-5+ 体育赛事
 https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
-#EXTINF:-1 tvg-id="CCTVWorldGeography.cn@SD" tvg-name="CCTV 世界地理" group-title="待修复·大陆",CCTV 世界地理
-http://38.75.136.137:98/gslb/dsdqpub/sjdl.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="CNDFilmMiddleSchoolChannel.cn@SD" tvg-name="CND 中学生电影频道" group-title="待修复·大陆",CND 中学生电影频道
 http://live2.rxip.sc96655.com/live/zxs_4000.m3u8?A=&E=&K=&P=&S=&U=
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD" tvg-name="东方卫视(国际)" group-title="待修复·大陆",东方卫视(国际)
@@ -451,8 +453,6 @@ https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
 https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTINF:-1 tvg-id="HongKongInternationalBusinessChannel.hk@SD" tvg-name="香港国际财经台" group-title="待修复·中国香港",香港国际财经台
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
-#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="待修复·中国香港",港台电视31
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV32.hk@SD" tvg-name="港台电视32" group-title="待修复·中国香港",港台电视32
 https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV33.hk@SD" tvg-name="港台电视33" group-title="待修复·中国香港",港台电视33
