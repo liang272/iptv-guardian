@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-09T14:41:32.632095+00:00
+# 自动维护：2026-11-09T15:40:39.236535+00:00
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
 https://mediaserver.abnvideos.com/streams/abnchina.m3u8
@@ -201,8 +201,6 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
 http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 #EXTINF:-1 tvg-id="SipingTV.cn@SD" tvg-name="四平电视台" group-title="大陆",四平电视台
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
-#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" group-title="大陆",金砖国家电视中文频道
-https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TianjinTV.cn@SD" tvg-name="天津卫视" group-title="大陆",天津卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
 #EXTINF:-1 tvg-id="VoATVChina.cn@SD" tvg-name="美国之音中文电视" group-title="大陆",美国之音中文电视
@@ -253,6 +251,8 @@ https://petclub-samsungaus.amagi.tv/playlist.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-name="凤凰卫视资讯台" group-title="中国香港",凤凰卫视资讯台
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="中国香港",港台电视31
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" group-title="中国香港",ViuTV 综合台
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="CanalMacau.mo@SD" tvg-name="澳门有线电视" group-title="中国澳门",澳门有线电视
@@ -439,6 +439,8 @@ http://livealone302.iqilu.com/iqilu/typd.m3u8
 http://livealone302.iqilu.com/iqilu/zypd.m3u8
 #EXTINF:-1 tvg-id="ShenzhenSatelliteTV.cn@SD" tvg-name="深圳卫视" group-title="待修复·大陆",深圳卫视
 https://livepull-tcms.sztv.com.cn/live/sz4Kpgm.m3u8
+#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" group-title="待修复·大陆",金砖国家电视中文频道
+https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TonghuaTV.cn@SD" tvg-name="通化电视台" group-title="待修复·大陆",通化电视台
 http://lsfb.avap.jilintv.cn/zqvk7vpj/channel/43ea5771aa44421591f9dfd2b71f1b9b/index.m3u8
 #EXTINF:-1 tvg-id="AsianDrama.hk@SD" tvg-name="亚洲剧集台" group-title="待修复·中国香港",亚洲剧集台
@@ -451,8 +453,6 @@ https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
 https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTINF:-1 tvg-id="HongKongInternationalBusinessChannel.hk@SD" tvg-name="香港国际财经台" group-title="待修复·中国香港",香港国际财经台
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
-#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="待修复·中国香港",港台电视31
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV32.hk@SD" tvg-name="港台电视32" group-title="待修复·中国香港",港台电视32
 https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV33.hk@SD" tvg-name="港台电视33" group-title="待修复·中国香港",港台电视33
