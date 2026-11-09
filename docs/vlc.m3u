@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-09T04:47:48.770666+00:00
+# 自动维护：2026-11-09T06:55:20.606653+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -477,10 +477,6 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
-#EXTINF:-1 tvg-id="GoldenJade.hk@SD" tvg-name="TVB 黄金翡翠台" tvg-logo="https://i.imgur.com/lPYxsUr.png" group-title="中国香港",TVB 黄金翡翠台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 #EXTINF:-1 tvg-id="Jade.hk@SD" tvg-name="TVB 翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="中国香港",TVB 翡翠台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -536,7 +532,7 @@ https://live3.tdm.com.mo/ch3/ch3.live/playlist.m3u8
 #EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-name="AXN 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="中国台湾",AXN 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://125.227.210.55:4050/VideoInput/play.ts
+http://202.150.165.66:8088/play/301-AXN/index.m3u8
 #EXTINF:-1 tvg-id="AnimaxAsia.sg@Taiwan" tvg-name="Animax 亚洲(中国台湾)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png" group-title="中国台湾",Animax 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -889,6 +885,10 @@ http://103.172.187.30:12000/stream/mytv/null-11/master.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
+#EXTINF:-1 tvg-id="GoldenJade.hk@SD" tvg-name="TVB 黄金翡翠台" tvg-logo="https://i.imgur.com/lPYxsUr.png" group-title="待修复·中国香港",TVB 黄金翡翠台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 #EXTINF:-1 tvg-id="HOYInfotainment.hk@HD" tvg-name="HOY 资讯台" tvg-logo="https://i.imgur.com/LNokYLQ.png" group-title="待修复·中国香港",HOY 资讯台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
