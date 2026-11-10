@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-10T15:05:18.091194+00:00
+# 自动维护：2026-11-10T15:53:56.366865+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -317,6 +317,10 @@ https://stream.jmtv.com.cn/xwzh/sd/live.m3u8?_upt=341f4b8e1791883036
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://117.156.28.119/270000001111/1110000001/index.m3u8
+#EXTINF:-1 tvg-id="KangbaTV.cn@SD" tvg-name="康巴卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/kangbatv.jpg" group-title="大陆",康巴卫视
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://110.185.237.164:8888/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="LanzhouComprehensiveNewsChannel.cn@SD" tvg-name="兰州综合新闻频道" tvg-logo="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_c2a13a952c0111b21f081d672798c8ed~c5_300x300.jpeg?from=2956013662" group-title="大陆",兰州综合新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -481,10 +485,6 @@ http://103.172.187.30:12000/stream/mytv/null-11/master.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
-#EXTINF:-1 tvg-id="GoldenJade.hk@SD" tvg-name="TVB 黄金翡翠台" tvg-logo="https://i.imgur.com/lPYxsUr.png" group-title="中国香港",TVB 黄金翡翠台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 #EXTINF:-1 tvg-id="Jade.hk@SD" tvg-name="TVB 翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="中国香港",TVB 翡翠台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -505,6 +505,10 @@ http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" tvg-logo="https://i.imgur.com/kf818kM.png" group-title="中国香港",港台电视31
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ViuTV_logo.svg/960px-ViuTV_logo.svg.png" group-title="中国香港",ViuTV 综合台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -769,10 +773,6 @@ https://live.mana2.my/Tv2/index.m3u8?auth_key=1745177833-e4f0090e3d3b4ed1b2b4f5d
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
-#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="华语",meWATCH 直播1台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
 #EXTINF:-1 tvg-id="CCTV16.cn@HD" tvg-name="CCTV-16 奥林匹克" tvg-logo="https://i.imgur.com/ZzV6JQp.png" group-title="待修复·大陆",CCTV-16 奥林匹克
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -849,10 +849,6 @@ https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/906341e6f19b4c4bacdc89941eb85d12/i
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/3ffc4824dce54b92be185555923ce382/index.m3u8
-#EXTINF:-1 tvg-id="KangbaTV.cn@SD" tvg-name="康巴卫视" tvg-logo="https://www.tvchinese.net/uploads/tv/kangbatv.jpg" group-title="待修复·大陆",康巴卫视
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://110.185.237.164:8888/hls/30/index.m3u8
 #EXTINF:-1 tvg-id="NanchangNewsGeneralistChannel.cn@SD" tvg-name="南昌新闻综合频道" tvg-logo="https://www.tvchinese.net/uploads/tv/nctv1.jpg" group-title="待修复·大陆",南昌新闻综合频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -893,6 +889,10 @@ http://lsfb.avap.jilintv.cn/zqvk7vpj/channel/43ea5771aa44421591f9dfd2b71f1b9b/in
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
+#EXTINF:-1 tvg-id="GoldenJade.hk@SD" tvg-name="TVB 黄金翡翠台" tvg-logo="https://i.imgur.com/lPYxsUr.png" group-title="待修复·中国香港",TVB 黄金翡翠台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 #EXTINF:-1 tvg-id="HOYInfotainment.hk@HD" tvg-name="HOY 资讯台" tvg-logo="https://i.imgur.com/LNokYLQ.png" group-title="待修复·中国香港",HOY 资讯台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -905,10 +905,6 @@ https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
-#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" tvg-logo="https://i.imgur.com/kf818kM.png" group-title="待修复·中国香港",港台电视31
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV32.hk@SD" tvg-name="港台电视32" tvg-logo="https://i.imgur.com/MXLuUoU.png" group-title="待修复·中国香港",港台电视32
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -953,3 +949,7 @@ https://cdn-telkomsel-01.akamaized.net/Content/HLS/Live/channel(abe4ead2-1a88-43
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
+#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="待修复·华语",meWATCH 直播1台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
