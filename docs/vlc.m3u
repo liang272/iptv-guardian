@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-10T19:22:49.696647+00:00
+# 自动维护：2026-11-10T20:14:28.295561+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -556,7 +556,7 @@ http://23.237.10.66:16372
 #EXTINF:-1 tvg-id="CinemaxAsia.sg@Taiwan" tvg-name="Cinemax 亚洲(中国台湾)" tvg-logo="https://i.imgur.com/c8crJfA.png" group-title="中国台湾",Cinemax 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://202.150.165.66:8088/play/104-Cinemax/index.m3u8
+http://125.227.210.55:1001/VideoInput/play.ts
 #EXTINF:-1 tvg-id="DaAi2.tw@SD" tvg-name="大爱二台" tvg-logo="https://i.imgur.com/KdJi9af.png" group-title="中国台湾",大爱二台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -736,7 +736,7 @@ http://103.154.3.101:5001/live/1736.m3u8
 #EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTD_Logo_with_symbol.svg/960px-NTD_Logo_with_symbol.svg.png" group-title="华语",新唐人电视(美东)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://ntd02.akamaized.net/HD-LA/index.m3u8
+https://ntd02.akamaized.net/HD-NY/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" tvg-logo="https://i.imgur.com/iyFXcDy.png" group-title="华语",新唐人电视(加拿大)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
