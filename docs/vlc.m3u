@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-10T20:14:28.295561+00:00
+# 自动维护：2026-11-10T21:01:27.868798+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -596,7 +596,7 @@ https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 tvg-id="HBOAsia.sg@Taiwan" tvg-name="HBO 亚洲(中国台湾)" tvg-logo="https://i.imgur.com/cE2gBt6.png" group-title="中国台湾",HBO 亚洲(中国台湾)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://125.227.210.55:1003/VideoInput/play.ts
+http://202.150.165.66:8088/play/100-HBO/index.m3u8
 #EXTINF:-1 tvg-id="HakkaTV.tw@SD" tvg-name="客家电视" tvg-logo="https://i.imgur.com/1CdGSbU.png" group-title="中国台湾",客家电视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
