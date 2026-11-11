@@ -13,16 +13,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153634,
-     "lat_ema": 164,
+     "last_ok": 1794374680.2964723,
+     "lat_ema": 168,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "andotvcn": {
@@ -38,17 +38,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 84,
+     "ok": 85,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153691,
-     "lat_ema": 1916,
+     "last_ok": 1794374680.2964778,
+     "lat_ema": 1762,
      "quality": 1,
      "unknown": 6
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "angeltvin": {
@@ -64,29 +64,29 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     },
     {
      "url": "https://cdn.pishow.tv/ott/live/453/master.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 707,
+     "lat_ema": 730,
      "quality": 2,
-     "last_ok": 1794370878.3153727
+     "last_ok": 1794374680.2964814
     },
     {
      "url": "https://janya-digimix.akamaized.net/vglive-sk-904559/africa/ngrp:angelafrica_all/playlist.m3u8",
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -96,9 +96,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -108,9 +108,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -120,9 +120,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -132,9 +132,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -237,8 +237,8 @@
     }
    ],
    "switches": 1,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "https://janya-digimix.akamaized.net/vglive-sk-999451/chinese/ngrp:angelchinese_all/playlist.m3u8"
@@ -256,17 +256,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 71,
+     "ok": 72,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153758,
-     "lat_ema": 871,
+     "last_ok": 1794374680.296484,
+     "lat_ema": 796,
      "quality": 4,
      "unknown": 19
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "anshuncomprehensivenewschannelcn": {
@@ -282,11 +282,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -303,17 +303,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153806,
-     "lat_ema": 1348,
+     "last_ok": 1794374680.2964873,
+     "lat_ema": 1392,
      "quality": 4,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "beijingsatellitetvcn": {
@@ -329,7 +329,7 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     },
     {
      "url": "http://go.bkpcp.top/mg/bjws",
@@ -339,7 +339,7 @@
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -356,11 +356,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -377,16 +377,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153882,
-     "lat_ema": 768,
+     "last_ok": 1794374680.2964942,
+     "lat_ema": 772,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "brtvkakuchildrenschannelcn": {
@@ -402,11 +402,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -423,17 +423,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 88,
+     "ok": 89,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153927,
-     "lat_ema": 750,
+     "last_ok": 1794374680.2964988,
+     "lat_ema": 745,
      "quality": 1,
      "unknown": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvplus2cn": {
@@ -449,17 +449,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 88,
+     "ok": 89,
      "consec_fail": 0,
-     "last_ok": 1794370878.315395,
-     "lat_ema": 731,
+     "last_ok": 1794374680.296501,
+     "lat_ema": 725,
      "quality": 1,
      "unknown": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv1cn": {
@@ -475,10 +475,10 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153968,
-     "lat_ema": 329,
+     "last_ok": 1794374680.2965033,
+     "lat_ema": 221,
      "quality": 3
     },
     {
@@ -486,8 +486,8 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 87,
-     "consec_fail": 21,
+     "fail": 88,
+     "consec_fail": 22,
      "ok": 3,
      "last_ok": 1794306052.6544955,
      "lat_ema": 1054,
@@ -495,8 +495,8 @@
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv2cn": {
@@ -512,16 +512,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3153992,
-     "lat_ema": 305,
+     "last_ok": 1794374680.296505,
+     "lat_ema": 209,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv3cn": {
@@ -537,16 +537,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315401,
-     "lat_ema": 340,
+     "last_ok": 1794374680.296507,
+     "lat_ema": 228,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv4kcn": {
@@ -562,8 +562,8 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 85,
-     "consec_fail": 18,
+     "fail": 86,
+     "consec_fail": 19,
      "ok": 5,
      "last_ok": 1794315660.0632272,
      "lat_ema": 1761,
@@ -571,7 +571,7 @@
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 1794315627.610102,
    "healthy": false
   },
@@ -588,13 +588,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -611,25 +611,25 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 83,
-     "consec_fail": 83
+     "fail": 84,
+     "consec_fail": 84
     },
     {
      "url": "http://69.30.245.50/live/cctv6.m3u8",
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 83,
+     "ok": 84,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154054,
-     "lat_ema": 155,
+     "last_ok": 1794374680.2965112,
+     "lat_ema": 117,
      "quality": 3,
      "unknown": 7
     }
    ],
    "switches": 1,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv7cn": {
@@ -645,16 +645,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154073,
-     "lat_ema": 299,
+     "last_ok": 1794374680.296513,
+     "lat_ema": 203,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv8cn": {
@@ -670,16 +670,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315409,
-     "lat_ema": 297,
+     "last_ok": 1794374680.2965145,
+     "lat_ema": 205,
      "quality": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv8kcn": {
@@ -695,16 +695,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154106,
-     "lat_ema": 150,
+     "last_ok": 1794374680.2965164,
+     "lat_ema": 116,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv9cn": {
@@ -720,16 +720,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154123,
-     "lat_ema": 97,
+     "last_ok": 1794374680.296518,
+     "lat_ema": 99,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv10cn": {
@@ -745,16 +745,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154142,
-     "lat_ema": 340,
+     "last_ok": 1794374680.2965202,
+     "lat_ema": 231,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv11cn": {
@@ -770,16 +770,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315416,
-     "lat_ema": 326,
+     "last_ok": 1794374680.296522,
+     "lat_ema": 222,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv12cn": {
@@ -795,16 +795,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154175,
-     "lat_ema": 328,
+     "last_ok": 1794374680.2965238,
+     "lat_ema": 224,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv13cn": {
@@ -820,10 +820,10 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154194,
-     "lat_ema": 459,
+     "last_ok": 1794374680.2965252,
+     "lat_ema": 300,
      "quality": 3
     },
     {
@@ -831,13 +831,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv14cn": {
@@ -853,16 +853,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154209,
-     "lat_ema": 742,
+     "last_ok": 1794374680.296527,
+     "lat_ema": 472,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv15cn": {
@@ -878,16 +878,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154225,
-     "lat_ema": 301,
+     "last_ok": 1794374680.2965283,
+     "lat_ema": 205,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv16cn": {
@@ -903,12 +903,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -925,16 +925,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154256,
-     "lat_ema": 258,
+     "last_ok": 1794374680.2965312,
+     "lat_ema": 182,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvbilliardscn": {
@@ -950,16 +950,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315427,
-     "lat_ema": 671,
+     "last_ok": 1794374680.296533,
+     "lat_ema": 448,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvcultureofqualitycn": {
@@ -975,16 +975,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315429,
-     "lat_ema": 338,
+     "last_ok": 1794374680.2965345,
+     "lat_ema": 248,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvgolftenniscn": {
@@ -1000,16 +1000,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154306,
-     "lat_ema": 290,
+     "last_ok": 1794374680.2965362,
+     "lat_ema": 221,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvhealthcn": {
@@ -1025,16 +1025,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154323,
-     "lat_ema": 345,
+     "last_ok": 1794374680.2965379,
+     "lat_ema": 253,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvnostalgiatheatercn": {
@@ -1050,16 +1050,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154337,
-     "lat_ema": 329,
+     "last_ok": 1794374680.2965393,
+     "lat_ema": 245,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvstormfootballcn": {
@@ -1075,16 +1075,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154352,
-     "lat_ema": 234,
+     "last_ok": 1794374680.2965412,
+     "lat_ema": 186,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvstormmusiccn": {
@@ -1100,16 +1100,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315437,
-     "lat_ema": 321,
+     "last_ok": 1794374680.2965426,
+     "lat_ema": 245,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvstormtheatercn": {
@@ -1125,16 +1125,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154383,
-     "lat_ema": 750,
+     "last_ok": 1794374680.2965446,
+     "lat_ema": 497,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvthefirsttheatercn": {
@@ -1150,16 +1150,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.31544,
-     "lat_ema": 558,
+     "last_ok": 1794374680.296546,
+     "lat_ema": 385,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvweapontechnologycn": {
@@ -1175,16 +1175,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154414,
-     "lat_ema": 226,
+     "last_ok": 1794374680.2965474,
+     "lat_ema": 181,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvwomensfashioncn": {
@@ -1200,16 +1200,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154433,
-     "lat_ema": 316,
+     "last_ok": 1794374680.296549,
+     "lat_ema": 237,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctvworldgeographycn": {
@@ -1225,17 +1225,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.315445,
-     "lat_ema": 288,
+     "last_ok": 1794374680.2965508,
+     "lat_ema": 221,
      "quality": 3,
      "fail": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cetv1cn": {
@@ -1251,11 +1251,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1272,11 +1272,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1293,17 +1293,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 83,
+     "ok": 84,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154483,
-     "lat_ema": 545,
+     "last_ok": 1794374680.2965543,
+     "lat_ema": 929,
      "quality": 3,
      "fail": 7
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "chcactioncn": {
@@ -1319,11 +1319,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1340,11 +1340,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1361,17 +1361,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154516,
-     "lat_ema": 1469,
+     "last_ok": 1794374680.2965577,
+     "lat_ema": 1490,
      "quality": 1,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "chinaweatherchannelcn": {
@@ -1387,11 +1387,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1408,16 +1408,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154545,
-     "lat_ema": 2012,
+     "last_ok": 1794374680.2965598,
+     "lat_ema": 2487,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "chuzhounewschannelcn": {
@@ -1433,11 +1433,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1454,11 +1454,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1475,11 +1475,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1496,11 +1496,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1517,12 +1517,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -1539,11 +1539,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1560,16 +1560,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315462,
-     "lat_ema": 1599,
+     "last_ok": 1794374680.296568,
+     "lat_ema": 1510,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "dragontvinternationalcn": {
@@ -1585,13 +1585,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 71,
-     "consec_fail": 71,
+     "fail": 72,
+     "consec_fail": 72,
      "unknown": 19
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -1608,11 +1608,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1629,11 +1629,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1650,11 +1650,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1671,11 +1671,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1692,16 +1692,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154688,
-     "lat_ema": 187,
+     "last_ok": 1794374680.2965739,
+     "lat_ema": 180,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "guangxivarietytravelchannelcn": {
@@ -1717,16 +1717,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154702,
-     "lat_ema": 480,
+     "last_ok": 1794374680.2965753,
+     "lat_ema": 477,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "guangzhoutvcn": {
@@ -1742,17 +1742,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.315472,
-     "lat_ema": 1437,
+     "last_ok": 1794374680.2965767,
+     "lat_ema": 1357,
      "quality": 2,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "guizhoutvcn": {
@@ -1768,11 +1768,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1789,16 +1789,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154745,
-     "lat_ema": 1186,
+     "last_ok": 1794374680.2965791,
+     "lat_ema": 1454,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "harbinmoviechannelcn": {
@@ -1814,16 +1814,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315476,
-     "lat_ema": 1132,
+     "last_ok": 1794374680.2965806,
+     "lat_ema": 1335,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hebeitvcn": {
@@ -1839,16 +1839,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154776,
-     "lat_ema": 1920,
+     "last_ok": 1794374680.296582,
+     "lat_ema": 2072,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hebinewschannelcn": {
@@ -1864,13 +1864,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 69,
+     "unknown": 70,
      "fail": 21,
      "consec_fail": 21
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -1887,11 +1887,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1908,11 +1908,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1929,11 +1929,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -1950,12 +1950,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -1972,17 +1972,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 84,
+     "ok": 85,
      "consec_fail": 0,
-     "last_ok": 1794370878.3154836,
-     "lat_ema": 1058,
+     "last_ok": 1794374680.2965877,
+     "lat_ema": 1022,
      "quality": 4,
      "fail": 6
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hunannewschannelcn": {
@@ -1998,13 +1998,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 79,
-     "consec_fail": 79,
+     "fail": 80,
+     "consec_fail": 80,
      "unknown": 11
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2021,13 +2021,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 80,
-     "consec_fail": 80,
+     "fail": 81,
+     "consec_fail": 81,
      "unknown": 10
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2044,16 +2044,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315488,
-     "lat_ema": 1403,
+     "last_ok": 1794374680.2965913,
+     "lat_ema": 1469,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hunanwomenschannelcn": {
@@ -2069,13 +2069,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 80,
-     "consec_fail": 80,
+     "fail": 81,
+     "consec_fail": 81,
      "unknown": 10
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2092,11 +2092,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2113,11 +2113,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2134,11 +2134,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2155,11 +2155,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2176,11 +2176,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2197,11 +2197,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2218,11 +2218,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2239,13 +2239,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2262,13 +2262,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2285,13 +2285,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2308,13 +2308,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2331,13 +2331,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2354,11 +2354,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2375,12 +2375,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2397,13 +2397,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2420,13 +2420,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 88,
-     "consec_fail": 88,
+     "fail": 89,
+     "consec_fail": 89,
      "unknown": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2443,13 +2443,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2466,17 +2466,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 86,
+     "ok": 87,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155067,
-     "lat_ema": 2487,
+     "last_ok": 1794374680.2966092,
+     "lat_ema": 2229,
      "quality": 4,
      "unknown": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "jiuquantvnewscomprehensivechannelcn": {
@@ -2492,11 +2492,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2513,18 +2513,18 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 78,
+     "ok": 79,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155096,
-     "lat_ema": 652,
+     "last_ok": 1794374680.2966118,
+     "lat_ema": 585,
      "quality": 3,
      "fail": 10,
      "unknown": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "lanzhoucomprehensivenewschannelcn": {
@@ -2540,16 +2540,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155112,
-     "lat_ema": 2084,
+     "last_ok": 1794374680.2966135,
+     "lat_ema": 1773,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "lanzhouculturetourismchannelcn": {
@@ -2565,16 +2565,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315513,
-     "lat_ema": 2053,
+     "last_ok": 1794374680.296615,
+     "lat_ema": 1741,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "liangshantvcn": {
@@ -2590,11 +2590,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2611,11 +2611,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2632,13 +2632,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2655,11 +2655,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2678,16 +2678,16 @@
      },
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155181,
-     "lat_ema": 1784,
+     "last_ok": 1794374680.2966201,
+     "lat_ema": 1605,
      "quality": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "ningxiasatellitechannelcn": {
@@ -2703,11 +2703,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2724,11 +2724,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2745,11 +2745,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2766,11 +2766,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2787,17 +2787,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 85,
+     "ok": 86,
      "consec_fail": 0,
-     "last_ok": 1794370878.315524,
-     "lat_ema": 978,
+     "last_ok": 1794374680.2966251,
+     "lat_ema": 920,
      "quality": 4,
      "unknown": 5
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "qtv3cn": {
@@ -2813,11 +2813,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2834,11 +2834,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2855,17 +2855,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 84,
+     "ok": 85,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155277,
-     "lat_ema": 677,
+     "last_ok": 1794374680.2966285,
+     "lat_ema": 623,
      "quality": 3,
      "unknown": 6
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "qtv6cn": {
@@ -2881,11 +2881,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2902,11 +2902,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2923,11 +2923,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -2944,12 +2944,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2966,12 +2966,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -2988,12 +2988,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3010,12 +3010,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3032,12 +3032,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3054,12 +3054,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3076,13 +3076,13 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 89,
-     "consec_fail": 89,
+     "fail": 90,
+     "consec_fail": 90,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3099,11 +3099,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3120,11 +3120,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3141,17 +3141,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.315541,
-     "lat_ema": 709,
+     "last_ok": 1794374680.2966404,
+     "lat_ema": 675,
      "quality": 4,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "tianjintvcn": {
@@ -3167,11 +3167,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3188,12 +3188,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3210,17 +3210,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 76,
+     "ok": 77,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155446,
-     "lat_ema": 1213,
+     "last_ok": 1794374680.2966437,
+     "lat_ema": 1184,
      "quality": 4,
      "fail": 14
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "voatvchinacn": {
@@ -3236,17 +3236,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.315546,
-     "lat_ema": 230,
+     "last_ok": 1794374680.2966454,
+     "lat_ema": 287,
      "quality": 4,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xianbusinessinformationchannelcn": {
@@ -3262,11 +3262,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3283,11 +3283,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3304,11 +3304,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3325,16 +3325,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155508,
-     "lat_ema": 578,
+     "last_ok": 1794374680.2966495,
+     "lat_ema": 586,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xinjiangtv3cn": {
@@ -3350,17 +3350,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155522,
-     "lat_ema": 595,
+     "last_ok": 1794374680.2966511,
+     "lat_ema": 585,
      "quality": 3,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xinjiangtv8cn": {
@@ -3376,16 +3376,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315554,
-     "lat_ema": 611,
+     "last_ok": 1794374680.2966526,
+     "lat_ema": 620,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xizangtvchinesecn": {
@@ -3401,17 +3401,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 88,
+     "ok": 89,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155556,
-     "lat_ema": 2026,
+     "last_ok": 1794374680.2966537,
+     "lat_ema": 1674,
      "quality": 2,
      "unknown": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xizangtvtibetancn": {
@@ -3427,16 +3427,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315557,
-     "lat_ema": 2776,
+     "last_ok": 1794374680.2966554,
+     "lat_ema": 2666,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "xuzhoueconomiclifechannelcn": {
@@ -3452,11 +3452,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3473,11 +3473,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3494,17 +3494,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 70,
+     "ok": 71,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155608,
-     "lat_ema": 1620,
+     "last_ok": 1794374680.2966588,
+     "lat_ema": 1515,
      "quality": 3,
      "unknown": 20
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "yichangsanxiatravellifechannelcn": {
@@ -3520,17 +3520,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 71,
+     "ok": 72,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155625,
-     "lat_ema": 1479,
+     "last_ok": 1794374680.2966604,
+     "lat_ema": 1480,
      "quality": 3,
      "unknown": 19
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "youmancartoonchannelcn": {
@@ -3546,11 +3546,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3567,11 +3567,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3588,17 +3588,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 85,
+     "ok": 86,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155658,
-     "lat_ema": 1965,
+     "last_ok": 1794374680.2966638,
+     "lat_ema": 1698,
      "quality": 4,
      "unknown": 5
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "zhejiangsatellitetvcn": {
@@ -3614,11 +3614,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3637,15 +3637,15 @@
      "weight": 6.0,
      "fail": 73,
      "consec_fail": 0,
-     "ok": 17,
-     "last_ok": 1794370878.3155682,
-     "lat_ema": 424,
+     "ok": 18,
+     "last_ok": 1794374680.2966666,
+     "lat_ema": 429,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "bstvhk": {
@@ -3661,11 +3661,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3682,11 +3682,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3705,15 +3705,15 @@
      "weight": 6.0,
      "fail": 52,
      "consec_fail": 0,
-     "ok": 38,
-     "last_ok": 1794370878.3155727,
-     "lat_ema": 426,
+     "ok": 39,
+     "last_ok": 1794374680.29667,
+     "lat_ema": 430,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hongkonginternationalbusinesschannelhk": {
@@ -3729,12 +3729,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3751,12 +3751,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3773,12 +3773,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3801,7 +3801,7 @@
      "headers": {},
      "fails": 0,
      "weight": 7.0,
-     "unknown": 90
+     "unknown": 91
     },
     {
      "url": "http://43.251.102.18:4000/play/a00g",
@@ -3811,7 +3811,7 @@
     }
    ],
    "switches": 1,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 1794098288.355813,
    "healthy": true
   },
@@ -3830,15 +3830,15 @@
      "weight": 6.0,
      "fail": 42,
      "consec_fail": 0,
-     "ok": 48,
-     "last_ok": 1794370878.315579,
-     "lat_ema": 435,
+     "ok": 49,
+     "last_ok": 1794374680.296676,
+     "lat_ema": 433,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "petclubtvhk": {
@@ -3854,16 +3854,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155804,
-     "lat_ema": 1335,
+     "last_ok": 1794374680.2966774,
+     "lat_ema": 1104,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "phoenixchinesechannelhk": {
@@ -3879,11 +3879,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3900,11 +3900,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -3922,17 +3922,17 @@
      "fails": 0,
      "weight": 6.0,
      "fail": 65,
-     "consec_fail": 1,
-     "ok": 25,
-     "last_ok": 1794367135.5787637,
-     "lat_ema": 531,
+     "consec_fail": 0,
+     "ok": 26,
+     "last_ok": 1794374680.296681,
+     "lat_ema": 685,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794367103.627751,
-   "healthy": false
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
+   "healthy": true
   },
   "rthktv32hk": {
    "key": "rthktv32hk",
@@ -3947,12 +3947,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3969,12 +3969,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -3991,12 +3991,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -4013,12 +4013,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -4035,16 +4035,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155892,
-     "lat_ema": 606,
+     "last_ok": 1794374680.296686,
+     "lat_ema": 440,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "canalmacaumo": {
@@ -4060,11 +4060,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4083,16 +4083,16 @@
      },
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155916,
-     "lat_ema": 1324,
+     "last_ok": 1794374680.296688,
+     "lat_ema": 1221,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "tdmentertainmentmo": {
@@ -4108,11 +4108,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4129,11 +4129,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4150,11 +4150,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4171,11 +4171,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4192,11 +4192,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4213,28 +4213,28 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370880.311434,
-     "lat_ema": 658,
+     "last_ok": 1794374682.2391727,
+     "lat_ema": 693,
      "quality": 0
     },
     {
      "url": "https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 272,
+     "lat_ema": 245,
      "quality": 1,
-     "last_ok": 1794370878.3155978
+     "last_ok": 1794374680.296694
     }
    ],
    "switches": 1,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "http://125.227.210.55:3056/VideoInput/play.ts"
@@ -4252,23 +4252,23 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3155997,
-     "lat_ema": 802,
+     "last_ok": 1794374680.2966955,
+     "lat_ema": 896,
      "quality": 0
     },
     {
      "url": "http://202.150.165.66:8088/play/301-AXN/index.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 1,
      "consec_fail": 0,
-     "lat_ema": 810,
+     "lat_ema": 716,
      "quality": 3,
-     "last_ok": 1794370881.8077672
+     "last_ok": 1794374684.189944
     },
     {
      "url": "http://103.253.74.210:7070/stream/89/index.m3u8",
@@ -4276,18 +4276,18 @@
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
      },
      "weight": 3.0,
-     "ok": 64,
+     "ok": 65,
      "fail": 25,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 917,
+     "lat_ema": 901,
      "quality": 2,
-     "last_ok": 1794370881.8077714
+     "last_ok": 1794374684.189949
     }
    ],
    "switches": 8,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "http://202.150.165.66:8088/play/301-AXN/index.m3u8"
@@ -4305,16 +4305,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156013,
-     "lat_ema": 789,
+     "last_ok": 1794374680.2966974,
+     "lat_ema": 753,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cgntvchinesetw": {
@@ -4330,16 +4330,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315603,
-     "lat_ema": 388,
+     "last_ok": 1794374680.2966986,
+     "lat_ema": 486,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cinemaxasiasg": {
@@ -4355,10 +4355,10 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156044,
-     "lat_ema": 672,
+     "last_ok": 1794374680.2967002,
+     "lat_ema": 686,
      "quality": 0
     },
     {
@@ -4366,9 +4366,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -4377,18 +4377,18 @@
      "url": "http://202.150.165.66:8088/play/104-Cinemax/index.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 1,
      "consec_fail": 0,
-     "lat_ema": 583,
+     "lat_ema": 550,
      "quality": 3,
-     "last_ok": 1794370887.3962169
+     "last_ok": 1794374687.6726973
     }
    ],
    "switches": 2,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "http://202.150.165.66:8088/play/104-Cinemax/index.m3u8"
@@ -4406,11 +4406,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4427,11 +4427,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4448,12 +4448,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -4470,11 +4470,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4491,12 +4491,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -4513,16 +4513,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315611,
-     "lat_ema": 1509,
+     "last_ok": 1794374680.2967288,
+     "lat_ema": 1232,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "ebcfinancialnewstw": {
@@ -4538,11 +4538,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4559,11 +4559,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4580,11 +4580,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4601,11 +4601,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4622,11 +4622,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4643,17 +4643,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156166,
-     "lat_ema": 568,
+     "last_ok": 1794374680.296736,
+     "lat_ema": 586,
      "quality": 4,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "goodtvtw": {
@@ -4669,17 +4669,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156183,
-     "lat_ema": 574,
+     "last_ok": 1794374680.2967372,
+     "lat_ema": 590,
      "quality": 4,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hakkatvtw": {
@@ -4695,16 +4695,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156195,
-     "lat_ema": 175,
+     "last_ok": 1794374680.2967389,
+     "lat_ema": 172,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "hboasiasg": {
@@ -4720,40 +4720,40 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370890.1844242,
-     "lat_ema": 844,
+     "last_ok": 1794374691.5403733,
+     "lat_ema": 1174,
      "quality": 2
     },
     {
      "url": "http://202.150.165.66:8088/play/100-HBO/index.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 1,
      "consec_fail": 0,
-     "lat_ema": 878,
+     "lat_ema": 732,
      "quality": 3,
-     "last_ok": 1794370878.3156214
+     "last_ok": 1794374680.29674
     },
     {
      "url": "https://tinyurl.com/yn3d3rmd",
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
     }
    ],
    "switches": 3,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "http://125.227.210.55:1003/VideoInput/play.ts"
@@ -4771,12 +4771,12 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -4793,11 +4793,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4814,16 +4814,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156247,
-     "lat_ema": 564,
+     "last_ok": 1794374680.296744,
+     "lat_ema": 551,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "pts3tw": {
@@ -4839,11 +4839,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4860,11 +4860,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4881,11 +4881,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4902,16 +4902,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315629,
-     "lat_ema": 208,
+     "last_ok": 1794374680.296748,
+     "lat_ema": 218,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "taiwanindigenoustvtw": {
@@ -4927,16 +4927,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156307,
-     "lat_ema": 1234,
+     "last_ok": 1794374680.2967498,
+     "lat_ema": 1190,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "ttvtw": {
@@ -4952,11 +4952,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -4973,16 +4973,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315633,
-     "lat_ema": 283,
+     "last_ok": 1794374680.2967525,
+     "lat_ema": 277,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "tvbsnewstw": {
@@ -4998,11 +4998,11 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -5019,16 +5019,16 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156354,
-     "lat_ema": 148,
+     "last_ok": 1794374680.2967546,
+     "lat_ema": 122,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "wxtvtw": {
@@ -5044,17 +5044,17 @@
      "headers": {},
      "fails": 0,
      "weight": 6.0,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156369,
-     "lat_ema": 1000,
+     "last_ok": 1794374680.2967563,
+     "lat_ema": 998,
      "quality": 2,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "8tvmy": {
@@ -5070,12 +5070,12 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -5092,10 +5092,10 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370882.5567641,
-     "lat_ema": 280,
+     "last_ok": 1794374684.670554,
+     "lat_ema": 299,
      "quality": 1
     },
     {
@@ -5103,9 +5103,9 @@
      "headers": {},
      "weight": 3.0,
      "ok": 0,
-     "fail": 90,
+     "fail": 91,
      "unknown": 0,
-     "consec_fail": 90,
+     "consec_fail": 91,
      "lat_ema": 0,
      "quality": 0,
      "last_ok": 0
@@ -5114,18 +5114,18 @@
      "url": "http://168.196.127.137:6001/play/a06j/index.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 134,
+     "lat_ema": 139,
      "quality": 4,
-     "last_ok": 1794370878.3156402
+     "last_ok": 1794374680.2967591
     }
    ],
    "switches": 5,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8"
@@ -5145,16 +5145,16 @@
      },
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315642,
-     "lat_ema": 316,
+     "last_ok": 1794374680.2967606,
+     "lat_ema": 312,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv4americacn": {
@@ -5170,11 +5170,11 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -5191,17 +5191,17 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156452,
-     "lat_ema": 497,
+     "last_ok": 1794374680.2967632,
+     "lat_ema": 323,
      "quality": 3,
      "fail": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cctv4europecn": {
@@ -5217,16 +5217,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156466,
-     "lat_ema": 535,
+     "last_ok": 1794374680.2967646,
+     "lat_ema": 545,
      "quality": 2
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cgtncn": {
@@ -5242,16 +5242,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156483,
-     "lat_ema": 424,
+     "last_ok": 1794374680.2967663,
+     "lat_ema": 352,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "cgtnglobalbizcn": {
@@ -5267,16 +5267,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.31565,
-     "lat_ema": 231,
+     "last_ok": 1794374680.2967675,
+     "lat_ema": 249,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "channel8sg": {
@@ -5292,16 +5292,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156517,
-     "lat_ema": 160,
+     "last_ok": 1794374680.2967694,
+     "lat_ema": 126,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "channelusg": {
@@ -5317,16 +5317,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156533,
+     "last_ok": 1794374680.2967708,
      "lat_ema": 71,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "chinatravelcn": {
@@ -5342,16 +5342,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.315655,
-     "lat_ema": 204,
+     "last_ok": 1794374680.296772,
+     "lat_ema": 192,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "creatvchannel15us": {
@@ -5367,12 +5367,12 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -5389,16 +5389,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156574,
-     "lat_ema": 940,
+     "last_ok": 1794374680.2967744,
+     "lat_ema": 1132,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "dhatr": {
@@ -5414,11 +5414,11 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -5435,16 +5435,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.31566,
-     "lat_ema": 184,
+     "last_ok": 1794374680.296777,
+     "lat_ema": 180,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "ftvtaiwantw": {
@@ -5460,11 +5460,11 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -5481,10 +5481,10 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156626,
-     "lat_ema": 491,
+     "last_ok": 1794374680.2967792,
+     "lat_ema": 487,
      "quality": 4,
      "unknown": 1
     },
@@ -5492,42 +5492,42 @@
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/kidsenglish.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 497,
+     "lat_ema": 489,
      "quality": 3,
-     "last_ok": 1794370888.1978679
+     "last_ok": 1794374688.8363812
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 481,
+     "lat_ema": 500,
      "quality": 4,
-     "last_ok": 1794370888.197874
+     "last_ok": 1794374688.8363855
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 501,
+     "lat_ema": 491,
      "quality": 3,
-     "last_ok": 1794370888.1978803
+     "last_ok": 1794374688.8363876
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "godstandstvpk": {
@@ -5543,83 +5543,83 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370889.0081701,
-     "lat_ema": 483,
+     "last_ok": 1794374689.8692114,
+     "lat_ema": 491,
      "quality": 4
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/mainlive.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 480,
+     "lat_ema": 494,
      "quality": 3,
-     "last_ok": 1794370889.0081763
+     "last_ok": 1794374689.869217
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/Arabic.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 489,
+     "lat_ema": 495,
      "quality": 4,
-     "last_ok": 1794370889.0081794
+     "last_ok": 1794374689.8692198
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/EnglishStreaming.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 489,
+     "lat_ema": 495,
      "quality": 3,
-     "last_ok": 1794370889.0081813
+     "last_ok": 1794374689.8692226
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/HindiStreaming.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 1,
      "consec_fail": 0,
-     "lat_ema": 487,
+     "lat_ema": 497,
      "quality": 4,
-     "last_ok": 1794370878.315665
+     "last_ok": 1794374680.2967815
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/PunjabiStreaming.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 482,
+     "lat_ema": 495,
      "quality": 3,
-     "last_ok": 1794370889.008183
+     "last_ok": 1794374689.8692255
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/Tagalog.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 89,
+     "ok": 90,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 491,
+     "lat_ema": 507,
      "quality": 4,
-     "last_ok": 1794370889.0081847
+     "last_ok": 1794374689.8692286
     },
     {
      "url": "https://online.godstands.tv:5443/WebRTCApp/streams/UrduStreaming.m3u8",
@@ -5635,8 +5635,8 @@
     }
    ],
    "switches": 1,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "https://online.godstands.tv:5443/WebRTCApp/streams/chineselive.m3u8"
@@ -5654,16 +5654,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156664,
-     "lat_ema": 144,
+     "last_ok": 1794374680.2967834,
+     "lat_ema": 170,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "kixhk": {
@@ -5679,17 +5679,17 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 89,
+     "ok": 90,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156686,
-     "lat_ema": 3745,
+     "last_ok": 1794374680.2967849,
+     "lat_ema": 3881,
      "quality": 1,
      "unknown": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "llbntvchineseus": {
@@ -5705,16 +5705,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.31567,
-     "lat_ema": 204,
+     "last_ok": 1794374680.296786,
+     "lat_ema": 174,
      "quality": 1
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "lovenatureca": {
@@ -5730,10 +5730,10 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370891.7678301,
-     "lat_ema": 341,
+     "last_ok": 1794374693.3006842,
+     "lat_ema": 396,
      "quality": 1
     },
     {
@@ -5741,52 +5741,52 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370891.7678368,
-     "lat_ema": 907,
+     "last_ok": 1794374693.3006895,
+     "lat_ema": 901,
      "quality": 4
     },
     {
      "url": "https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 175,
+     "lat_ema": 200,
      "quality": 4,
-     "last_ok": 1794370878.315672
+     "last_ok": 1794374680.2967877
     },
     {
      "url": "http://88.212.15.50/live/test_love_nature_uhd_atktv/playlist.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 258,
+     "lat_ema": 260,
      "quality": 3,
-     "last_ok": 1794370891.767841
+     "last_ok": 1794374693.3006926
     },
     {
      "url": "http://88.212.15.50/live/test_lovenature/playlist.m3u8",
      "headers": {},
      "weight": 3.0,
-     "ok": 90,
+     "ok": 91,
      "fail": 0,
      "unknown": 0,
      "consec_fail": 0,
-     "lat_ema": 261,
+     "lat_ema": 263,
      "quality": 0,
-     "last_ok": 1794370891.7678478
+     "last_ok": 1794374693.300696
     }
    ],
    "switches": 4,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "http://88.212.15.50/live/test_love_nature_uhd_atktv/playlist.m3u8"
@@ -5804,11 +5804,11 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "unknown": 90
+     "unknown": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -5826,17 +5826,17 @@
      "fails": 0,
      "weight": 5,
      "fail": 85,
-     "consec_fail": 6,
-     "ok": 5,
-     "last_ok": 1794352021.0953736,
-     "lat_ema": 466,
+     "consec_fail": 0,
+     "ok": 6,
+     "last_ok": 1794374680.2967906,
+     "lat_ema": 417,
      "quality": 0
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794351987.539711,
-   "healthy": false
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
+   "healthy": true
   },
   "ntdtvus": {
    "key": "ntdtvus",
@@ -5852,19 +5852,19 @@
      "fails": 0,
      "weight": 5,
      "ok": 62,
-     "consec_fail": 1,
+     "consec_fail": 2,
      "last_ok": 1794367135.9439676,
      "lat_ema": 180,
      "quality": 1,
-     "fail": 28
+     "fail": 29
     },
     {
      "url": "https://ntd02.akamaized.net/HD-LA/index.m3u8",
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "fail": 32,
-     "consec_fail": 2,
+     "fail": 33,
+     "consec_fail": 3,
      "ok": 58,
      "last_ok": 1794363867.8143806,
      "lat_ema": 300,
@@ -5872,7 +5872,7 @@
     }
    ],
    "switches": 22,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 1794367103.627751,
    "healthy": false,
    "active_headers": {},
@@ -5891,10 +5891,10 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156767,
-     "lat_ema": 137,
+     "last_ok": 1794374680.2967935,
+     "lat_ema": 148,
      "quality": 2
     },
     {
@@ -5902,16 +5902,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370892.667302,
-     "lat_ema": 333,
+     "last_ok": 1794374693.8818083,
+     "lat_ema": 402,
      "quality": 2
     }
    ],
    "switches": 2,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true,
    "active_headers": {},
    "prev_active": "https://live.ntdtv.com/cwlive220/playlist.m3u8"
@@ -5929,16 +5929,16 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156781,
-     "lat_ema": 318,
+     "last_ok": 1794374680.296795,
+     "lat_ema": 267,
      "quality": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "okeymy": {
@@ -5956,16 +5956,16 @@
      },
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156798,
-     "lat_ema": 270,
+     "last_ok": 1794374680.2967966,
+     "lat_ema": 265,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "peacetvchineseae": {
@@ -5981,17 +5981,17 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 87,
+     "ok": 88,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156812,
-     "lat_ema": 1210,
+     "last_ok": 1794374680.296798,
+     "lat_ema": 1130,
      "quality": 1,
      "unknown": 3
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   },
   "techstormsg": {
@@ -6007,12 +6007,12 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -6029,12 +6029,12 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "fail": 90,
-     "consec_fail": 90
+     "fail": 91,
+     "consec_fail": 91
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": false
   },
@@ -6051,7 +6051,7 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "unknown": 90
+     "unknown": 91
     },
     {
      "url": "https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/playlist.m3u8?id=2",
@@ -6069,7 +6069,7 @@
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
+   "last_check": 1794374648.274676,
    "last_ok": 0,
    "healthy": true
   },
@@ -6086,188 +6086,20 @@
      "headers": {},
      "fails": 0,
      "weight": 5,
-     "ok": 90,
+     "ok": 91,
      "consec_fail": 0,
-     "last_ok": 1794370878.3156857,
-     "lat_ema": 171,
+     "last_ok": 1794374680.296802,
+     "lat_ema": 172,
      "quality": 4
     }
    ],
    "switches": 0,
-   "last_check": 1794370845.2126393,
-   "last_ok": 1794370845.2126393,
+   "last_check": 1794374648.274676,
+   "last_ok": 1794374648.274676,
    "healthy": true
   }
  },
  "log": [
-  {
-   "t": 1794363833.7539754,
-   "msg": "[港台电视34] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[港台电视35] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[大爱一台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[大立电视] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[原住民电视] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[马来西亚8TV] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[CreaTV 15频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[meWATCH 直播1台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[TechStorm 科技频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794363833.7539754,
-   "msg": "[Thrill 惊悚频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[CCTV-4K 超高清] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[CCTV-5+ 体育赛事] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[CCTV-16 奥林匹克] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[CND 中学生电影频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[东方卫视(国际)] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[HomePlus 家庭频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[湖南新闻频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[湖南政法频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[湖南女性频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[江西少儿频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[江西都市频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[江西经济生活频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[江西电影频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[江西公共·农业频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[吉林都市频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[吉林生活频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[吉林电影频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[吉林乡村频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[南昌新闻综合频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东农科频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东少儿频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东生活频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东齐鲁频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东体育频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[山东综艺频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[深圳卫视] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[通化电视台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[金砖国家电视中文频道] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[TVB 黄金翡翠台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[香港国际财经台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[HOY 资讯台] 备用池 0 个地址均不可用，标记待修复"
-  },
-  {
-   "t": 1794367103.627751,
-   "msg": "[HOY 综合台] 备用池 0 个地址均不可用，标记待修复"
-  },
   {
    "t": 1794367103.627751,
    "msg": "[美亚电影台] 备用池 0 个地址均不可用，标记待修复"
@@ -6499,9 +6331,177 @@
   {
    "t": 1794370845.2126393,
    "msg": "[Thrill 惊悚频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[CCTV-4K 超高清] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[CCTV-5+ 体育赛事] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[CCTV-16 奥林匹克] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[CND 中学生电影频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[东方卫视(国际)] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[HomePlus 家庭频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[湖南新闻频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[湖南政法频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[湖南女性频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[江西少儿频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[江西都市频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[江西经济生活频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[江西电影频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[江西公共·农业频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[吉林都市频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[吉林生活频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[吉林电影频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[吉林乡村频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[南昌新闻综合频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东农科频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东少儿频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东生活频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东齐鲁频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东体育频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[山东综艺频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[深圳卫视] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[通化电视台] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[香港国际财经台] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[HOY 资讯台] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[HOY 综合台] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[港台电视32] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[港台电视33] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[港台电视34] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[港台电视35] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[大爱一台] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[大立电视] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[原住民电视] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[马来西亚8TV] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[CreaTV 15频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[新唐人电视(美东)] 备用池 1 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[TechStorm 科技频道] 备用池 0 个地址均不可用，标记待修复"
+  },
+  {
+   "t": 1794374648.274676,
+   "msg": "[Thrill 惊悚频道] 备用池 0 个地址均不可用，标记待修复"
   }
  ],
- "updated": "2026-11-11T04:21:32.667327+00:00",
+ "updated": "2026-11-11T05:24:53.881837+00:00",
  "names_hash": "8917b195b75f5582f4a77eeb0985089c",
  "opt_cursor": 0
 }
