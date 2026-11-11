@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-11T15:34:38.403655+00:00
+# 自动维护：2026-11-11T16:32:31.189558+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -186,6 +186,8 @@ http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8
 http://119.166.53.110:85/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="QTV4.cn@SD" tvg-name="青岛电视台-4" group-title="大陆",青岛电视台-4
 http://119.166.53.110:85/tsfile/live/1004_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="QTV5.cn@SD" tvg-name="青岛电视台-5" group-title="大陆",青岛电视台-5
+http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 tvg-id="QTV6.cn@SD" tvg-name="青岛电视台-6" group-title="大陆",青岛电视台-6
 http://119.166.53.110:85/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="QinghaiTV.cn@SD" tvg-name="青海卫视" group-title="大陆",青海卫视
@@ -200,8 +202,6 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
 http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 #EXTINF:-1 tvg-id="SipingTV.cn@SD" tvg-name="四平电视台" group-title="大陆",四平电视台
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
-#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" group-title="大陆",金砖国家电视中文频道
-https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TianjinTV.cn@SD" tvg-name="天津卫视" group-title="大陆",天津卫视
 http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
 #EXTINF:-1 tvg-id="VoATVChina.cn@SD" tvg-name="美国之音中文电视" group-title="大陆",美国之音中文电视

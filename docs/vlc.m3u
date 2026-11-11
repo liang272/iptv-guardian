@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-11T15:34:38.403655+00:00
+# 自动维护：2026-11-11T16:32:31.189558+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -369,6 +369,10 @@ http://119.166.53.110:85/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://119.166.53.110:85/tsfile/live/1004_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="QTV5.cn@SD" tvg-name="青岛电视台-5" tvg-logo="https://www.tvchinese.net/uploads/tv/qdtv5.jpg" group-title="大陆",青岛电视台-5
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 tvg-id="QTV6.cn@SD" tvg-name="青岛电视台-6" tvg-logo="https://www.tvchinese.net/uploads/tv/qdtv6.jpg" group-title="大陆",青岛电视台-6
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -397,10 +401,6 @@ http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
-#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" tvg-logo="https://i.imgur.com/896132Z.png" group-title="大陆",金砖国家电视中文频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TianjinTV.cn@SD" tvg-name="天津卫视" tvg-logo="https://i.imgur.com/Bg24eaH.png" group-title="大陆",天津卫视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -853,10 +853,6 @@ https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/3ffc4824dce54b92be185555923ce382/i
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://play-live-hls.jxtvcn.com.cn/live-city/tv_nanchang.m3u8
-#EXTINF:-1 tvg-id="QTV5.cn@SD" tvg-name="青岛电视台-5" tvg-logo="https://www.tvchinese.net/uploads/tv/qdtv5.jpg" group-title="待修复·大陆",青岛电视台-5
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 tvg-id="ShandongTVAgriculturalScienceChannel.cn@SD" tvg-name="山东农科频道" tvg-logo="https://i.imgur.com/EY2zH06.png" group-title="待修复·大陆",山东农科频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -885,6 +881,10 @@ http://livealone302.iqilu.com/iqilu/zypd.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://livepull-tcms.sztv.com.cn/live/sz4Kpgm.m3u8
+#EXTINF:-1 tvg-id="TVBRICSChinese.cn@SD" tvg-name="金砖国家电视中文频道" tvg-logo="https://i.imgur.com/896132Z.png" group-title="待修复·大陆",金砖国家电视中文频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 tvg-id="TonghuaTV.cn@SD" tvg-name="通化电视台" tvg-logo="https://www.tvchinese.net/uploads/tv/thtv1.jpg" group-title="待修复·大陆",通化电视台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
