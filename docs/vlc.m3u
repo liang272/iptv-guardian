@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-12T09:59:16.847147+00:00
+# 自动维护：2026-11-12T10:59:54.138068+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -656,7 +656,7 @@ https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w117
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-name="BabyFirst 婴幼儿频道" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="华语",BabyFirst 婴幼儿频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
+http://168.196.127.137:6001/play/a06j/index.m3u8
 #EXTINF:-1 tvg-id="BeritaRTM.my@SD" tvg-name="RTM 新闻频道" tvg-logo="https://i.imgur.com/1Xzxsgl.png" group-title="华语",RTM 新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
