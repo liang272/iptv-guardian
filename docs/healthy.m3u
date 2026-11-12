@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-12T00:36:29.831591+00:00
+# 自动维护：2026-11-12T01:56:35.807697+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -244,8 +244,6 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
 #EXTINF:-1 tvg-id="Jade.hk@SD" tvg-name="TVB 翡翠台" group-title="中国香港",TVB 翡翠台
 http://27.46.95.90:800/hls/1789773363/index.m3u8
-#EXTINF:-1 tvg-id="MeiAhMovieChannel.hk@SD" tvg-name="美亚电影台" group-title="中国香港",美亚电影台
-http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
 #EXTINF:-1 tvg-id="PetClubTV.hk@SD" tvg-name="宠物俱乐部电视" group-title="中国香港",宠物俱乐部电视
 https://petclub-samsungaus.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="PhoenixChineseChannel.hk@SD" tvg-name="凤凰卫视中文台" group-title="中国香港",凤凰卫视中文台
