@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-12T21:47:08.585955+00:00
+# 自动维护：2026-11-12T22:29:59.676991+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -89,10 +89,6 @@ http://74.91.26.218:82/live/cctv2hd.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://74.91.26.218:82/live/cctv3hd.m3u8
-#EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K 超高清" tvg-logo="https://i.imgur.com/fxusYlX.png" group-title="大陆",CCTV-4K 超高清
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@SD" tvg-name="CCTV-6 电影" tvg-logo="https://i.imgur.com/rFiaef7.png" group-title="大陆",CCTV-6 电影
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -769,6 +765,10 @@ https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://74.91.26.218:82/live/cctv16hd.m3u8
+#EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K 超高清" tvg-logo="https://i.imgur.com/fxusYlX.png" group-title="待修复·大陆",CCTV-4K 超高清
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV5Plus.cn@SD" tvg-name="CCTV-5+ 体育赛事" tvg-logo="https://i.imgur.com/OK8mdJV.png" group-title="待修复·大陆",CCTV-5+ 体育赛事
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
