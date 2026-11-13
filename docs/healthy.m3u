@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-13T08:01:03.920100+00:00
+# 自动维护：2026-11-13T08:57:00.249129+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -256,8 +256,6 @@ https://petclub-samsungaus.amagi.tv/playlist.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-name="凤凰卫视资讯台" group-title="中国香港",凤凰卫视资讯台
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="中国香港",港台电视31
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" group-title="中国香港",ViuTV 综合台
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="CanalMacau.mo@SD" tvg-name="澳门有线电视" group-title="中国澳门",澳门有线电视
@@ -370,6 +368,8 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
+#EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
+https://ntd02.akamaized.net/HD-LA/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/cwlive220/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)
