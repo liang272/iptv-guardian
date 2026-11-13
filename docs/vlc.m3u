@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-13T14:49:40.673930+00:00
+# 自动维护：2026-11-13T15:32:40.675127+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -656,7 +656,7 @@ https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w117
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-name="BabyFirst 婴幼儿频道" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="华语",BabyFirst 婴幼儿频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-http://168.196.127.137:6001/play/a06j/index.m3u8
+https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 #EXTINF:-1 tvg-id="BeritaRTM.my@SD" tvg-name="RTM 新闻频道" tvg-logo="https://i.imgur.com/1Xzxsgl.png" group-title="华语",RTM 新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -765,10 +765,6 @@ https://live.mana2.my/Tv2/index.m3u8?auth_key=1745177833-e4f0090e3d3b4ed1b2b4f5d
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
-#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="华语",meWATCH 直播1台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
 #EXTINF:-1 tvg-id="CCTV16.cn@HD" tvg-name="CCTV-16 奥林匹克" tvg-logo="https://i.imgur.com/ZzV6JQp.png" group-title="待修复·大陆",CCTV-16 奥林匹克
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -953,3 +949,7 @@ https://cdn-telkomsel-01.akamaized.net/Content/HLS/Live/channel(abe4ead2-1a88-43
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
+#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="待修复·华语",meWATCH 直播1台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd

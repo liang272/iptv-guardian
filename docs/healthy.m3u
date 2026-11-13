@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-13T14:49:40.673930+00:00
+# 自动维护：2026-11-13T15:32:40.675127+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -329,7 +329,7 @@ https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
 #EXTINF:-1 tvg-id="WXTV.tw@SD" tvg-name="WXTV 电视" group-title="中国台湾",WXTV 电视
 https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-name="BabyFirst 婴幼儿频道" group-title="华语",BabyFirst 婴幼儿频道
-http://168.196.127.137:6001/play/a06j/index.m3u8
+https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 #EXTINF:-1 tvg-id="BeritaRTM.my@SD" tvg-name="RTM 新闻频道" group-title="华语",RTM 新闻频道
 https://d25tgymtnqzu8s.cloudfront.net/smil:berita/playlist.m3u8?id=5
 #EXTINF:-1 tvg-id="CCTV4America.cn@SD" tvg-name="CCTV-4 中文国际(美洲)" group-title="华语",CCTV-4 中文国际(美洲)
@@ -384,5 +384,3 @@ https://dzkyvlfyge.erbvr.com/PeaceTvChinese/index.m3u8
 https://live.mana2.my/Tv2/index.m3u8?auth_key=1745177833-e4f0090e3d3b4ed1b2b4f5df87a24d34-0-d43f8be1101f9bb00363d62de6514e4d&token=1745177833-e4f0090e3d3b4ed1b2b4f5df87a24d34-0-d43f8be1101f9bb00363d62de6514e4d
 #EXTINF:-1 tvg-id="WCETVDigitalChannel318.us@SD" tvg-name="WCETV 数字31.8频道" group-title="华语",WCETV 数字31.8频道
 https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
-#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" group-title="华语",meWATCH 直播1台
-https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
