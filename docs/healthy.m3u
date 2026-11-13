@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-13T00:00:14.661399+00:00
+# 自动维护：2026-11-13T01:04:08.231789+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -46,6 +46,8 @@ http://74.91.26.218:82/live/cctv17hd.m3u8
 http://74.91.26.218:82/live/cctv2hd.m3u8
 #EXTINF:-1 tvg-id="CCTV3.cn@SD" tvg-name="CCTV-3 综艺" group-title="大陆",CCTV-3 综艺
 http://74.91.26.218:82/live/cctv3hd.m3u8
+#EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K 超高清" group-title="大陆",CCTV-4K 超高清
+http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@SD" tvg-name="CCTV-6 电影" group-title="大陆",CCTV-6 电影
 http://69.30.245.50/live/cctv6.m3u8
 #EXTINF:-1 tvg-id="CCTV7.cn@SD" tvg-name="CCTV-7 国防军事" group-title="大陆",CCTV-7 国防军事
@@ -371,7 +373,7 @@ https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
 #EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
-https://ntd02.akamaized.net/HD-LA/index.m3u8
+https://ntd02.akamaized.net/HD-NY/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/cwlive220/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)
