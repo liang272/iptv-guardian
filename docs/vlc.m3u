@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-14T10:00:25.969420+00:00
+# 自动维护：2026-11-14T11:20:00.096448+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -45,6 +45,10 @@ https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CCTVPlus2.cn@SD" tvg-name="CCTV+ 2 频道" tvg-logo="https://i.imgur.com/qSg862A.png" group-title="大陆",CCTV+ 2 频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1 综合" tvg-logo="https://i.imgur.com/TpA3cUl.png" group-title="大陆",CCTV-1 综合
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -173,10 +177,6 @@ http://39.134.19.153/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/inde
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://125.210.152.18:9090/live/FXZL_750.m3u8
-#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="大陆",潮州公共频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD" tvg-name="赤峰综合新闻频道" tvg-logo="https://www.tvchinese.net/uploads/tv/cfxwzhpd.jpg" group-title="大陆",赤峰综合新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -761,10 +761,6 @@ https://live.mana2.my/Tv2/index.m3u8?auth_key=1745177833-e4f0090e3d3b4ed1b2b4f5d
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
-#EXTINF:-1 tvg-id="CCTVPlus2.cn@SD" tvg-name="CCTV+ 2 频道" tvg-logo="https://i.imgur.com/qSg862A.png" group-title="待修复·大陆",CCTV+ 2 频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CCTV16.cn@HD" tvg-name="CCTV-16 奥林匹克" tvg-logo="https://i.imgur.com/ZzV6JQp.png" group-title="待修复·大陆",CCTV-16 奥林匹克
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -781,6 +777,10 @@ https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://live2.rxip.sc96655.com/live/zxs_4000.m3u8?A=&E=&K=&P=&S=&U=
+#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="待修复·大陆",潮州公共频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD" tvg-name="东方卫视(国际)" tvg-logo="https://i.imgur.com/WqM6xnF.png" group-title="待修复·大陆",东方卫视(国际)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
