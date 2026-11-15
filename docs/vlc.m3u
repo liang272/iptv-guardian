@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-15T05:20:46.508778+00:00
+# 自动维护：2026-11-15T06:15:11.461066+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -732,7 +732,7 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-name="Love Nature 自然频道" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="华语",Love Nature 自然频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" tvg-logo="https://i.imgur.com/24ehonx.png" group-title="华语",Luxe 奢华电视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
