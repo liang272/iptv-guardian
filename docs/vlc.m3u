@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-16T11:00:01.821862+00:00
+# 自动维护：2026-11-16T12:05:29.893282+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -716,7 +716,7 @@ https://online.godstands.tv:5443/WebRTCApp/streams/KidsChinese.m3u8
 #EXTINF:-1 tvg-id="GodStandsTV.pk@Chinese" tvg-name="God Stands 中文台" tvg-logo="https://i.imgur.com/EO6cYUI.png" group-title="华语",God Stands 中文台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://online.godstands.tv:5443/WebRTCApp/streams/HindiStreaming.m3u8
+https://online.godstands.tv:5443/WebRTCApp/streams/mainlive.m3u8
 #EXTINF:-1 tvg-id="GuangdongTVAmerica.us@SD" tvg-name="广东电视美洲台" tvg-logo="https://i.imgur.com/7J4qGjA.png" group-title="华语",广东电视美洲台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
