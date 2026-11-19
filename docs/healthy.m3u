@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-19T14:53:46.979411+00:00
+# 自动维护：2026-11-19T15:48:52.004352+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -8,8 +8,6 @@ https://mediaserver.abnvideos.com/streams/abnchina.m3u8
 http://play.kankanlive.com/live/1711956137852982.m3u8
 #EXTINF:-1 tvg-id="AngelTV.in@Chinese" tvg-name="天使电视中文台" group-title="大陆",天使电视中文台
 https://cdn.pishow.tv/ott/live/453/master.m3u8
-#EXTINF:-1 tvg-id="AnhuiTV.cn@SD" tvg-name="安徽卫视" group-title="大陆",安徽卫视
-https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
 #EXTINF:-1 tvg-id="AnshunComprehensiveNewsChannel.cn@SD" tvg-name="安顺综合新闻频道" group-title="大陆",安顺综合新闻频道
 https://hplayer1.juyun.tv/camera/154379194.m3u8
 #EXTINF:-1 tvg-id="BRTVKakuChildrensChannel.cn@SD" tvg-name="北京卡酷少儿频道" group-title="大陆",北京卡酷少儿频道
@@ -216,8 +214,6 @@ http://110.153.180.106:55555/out_3/index.m3u8
 http://110.153.180.106:55555/out_2/index.m3u8
 #EXTINF:-1 tvg-id="XinjiangTV8.cn@SD" tvg-name="新疆电视-8" group-title="大陆",新疆电视-8
 http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
-#EXTINF:-1 tvg-id="XizangTVChinese.cn@SD" tvg-name="西藏卫视(汉语)" group-title="大陆",西藏卫视(汉语)
-https://pili-live-hls-zdzz-tv.zzxwcm.cn/zdzz-tv/nqzh.m3u8
 #EXTINF:-1 tvg-id="XizangTVTibetan.cn@SD" tvg-name="西藏卫视(藏语)" group-title="大陆",西藏卫视(藏语)
 https://live.vtibet.cn/live/ZYWS20261016.stream.m3u8
 #EXTINF:-1 tvg-id="XuzhouEconomicLifeChannel.cn@SD" tvg-name="徐州经济生活频道" group-title="大陆",徐州经济生活频道
@@ -252,6 +248,8 @@ https://petclub-samsungaus.amagi.tv/playlist.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-name="凤凰卫视资讯台" group-title="中国香港",凤凰卫视资讯台
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" group-title="中国香港",港台电视31
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" group-title="中国香港",ViuTV 综合台
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="CanalMacau.mo@SD" tvg-name="澳门有线电视" group-title="中国澳门",澳门有线电视
@@ -361,7 +359,7 @@ https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
 #EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
-https://ntd02.akamaized.net/HD-LA/index.m3u8
+https://ntd02.akamaized.net/HD-NY/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/cwlive220/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)
