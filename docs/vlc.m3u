@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-21T22:11:08.625168+00:00
+# 自动维护：2026-11-21T22:53:33.749539+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -177,10 +177,6 @@ http://39.134.19.153/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/inde
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://125.210.152.18:9090/live/FXZL_750.m3u8
-#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="大陆",潮州公共频道
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD" tvg-name="赤峰综合新闻频道" tvg-logo="https://www.tvchinese.net/uploads/tv/cfxwzhpd.jpg" group-title="大陆",赤峰综合新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -697,6 +693,14 @@ https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://seb.sason.top/ptv/ftv.php?id=tw
+#EXTINF:-1 tvg-id="GodStandsKidsClubTV.pk@Chinese" tvg-name="God Stands 儿童中文台" tvg-logo="https://i.imgur.com/FxDBbpz.jpeg" group-title="华语",God Stands 儿童中文台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8
+#EXTINF:-1 tvg-id="GodStandsTV.pk@Chinese" tvg-name="God Stands 中文台" tvg-logo="https://i.imgur.com/EO6cYUI.png" group-title="华语",God Stands 中文台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://online.godstands.tv:5443/WebRTCApp/streams/chineselive.m3u8
 #EXTINF:-1 tvg-id="GuangdongTVAmerica.us@SD" tvg-name="广东电视美洲台" tvg-logo="https://i.imgur.com/7J4qGjA.png" group-title="华语",广东电视美洲台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -745,6 +749,10 @@ https://live.mana2.my/Tv2/index.m3u8?auth_key=1745177833-e4f0090e3d3b4ed1b2b4f5d
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://h5cul1yar48um3t.wcetv.com/hls/wcetv318.m3u8
+#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="华语",meWATCH 直播1台
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
 #EXTINF:-1 tvg-id="CCTV16.cn@HD" tvg-name="CCTV-16 奥林匹克" tvg-logo="https://i.imgur.com/ZzV6JQp.png" group-title="待修复·大陆",CCTV-16 奥林匹克
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -761,6 +769,10 @@ https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://live2.rxip.sc96655.com/live/zxs_4000.m3u8?A=&E=&K=&P=&S=&U=
+#EXTINF:-1 tvg-id="ChaozhouPublicChannel.cn@SD" tvg-name="潮州公共频道" tvg-logo="https://i.imgur.com/8YIrgB7.png" group-title="待修复·大陆",潮州公共频道
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+http://113.64.146.48:1688/hls/4/index.m3u8
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD" tvg-name="东方卫视(国际)" tvg-logo="https://i.imgur.com/WqM6xnF.png" group-title="待修复·大陆",东方卫视(国际)
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -933,14 +945,6 @@ http://cdn6.163189.xyz/163189/8tv
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://reflect-creatv.cablecast.tv/live-13/live/live.m3u8
-#EXTINF:-1 tvg-id="GodStandsKidsClubTV.pk@Chinese" tvg-name="God Stands 儿童中文台" tvg-logo="https://i.imgur.com/FxDBbpz.jpeg" group-title="待修复·华语",God Stands 儿童中文台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8
-#EXTINF:-1 tvg-id="GodStandsTV.pk@Chinese" tvg-name="God Stands 中文台" tvg-logo="https://i.imgur.com/EO6cYUI.png" group-title="待修复·华语",God Stands 中文台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://online.godstands.tv:5443/WebRTCApp/streams/chineselive.m3u8
 #EXTINF:-1 tvg-id="TechStorm.sg@SD" tvg-name="TechStorm 科技频道" tvg-logo="https://i.imgur.com/fAprFBJ.png" group-title="待修复·华语",TechStorm 科技频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -949,7 +953,3 @@ https://cdn-telkomsel-01.akamaized.net/Content/HLS/Live/channel(abe4ead2-1a88-43
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
-#EXTINF:-1 tvg-id="meWATCHLIVE1.sg@SD" tvg-name="meWATCH 直播1台" tvg-logo="https://i.imgur.com/ppxUDxB.png" group-title="待修复·华语",meWATCH 直播1台
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://tglmp04.akamaized.net/out/v1/898b1cbac7c747e3b1f3deb460e9b67e/manifest.mpd
