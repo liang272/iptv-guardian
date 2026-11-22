@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-22T06:21:06.764208+00:00
+# 自动维护：2026-11-22T07:40:54.879626+00:00
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
 https://mediaserver.abnvideos.com/streams/abnchina.m3u8
@@ -329,6 +329,8 @@ https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 https://d25tgymtnqzu8s.cloudfront.net/smil:berita/playlist.m3u8?id=5
 #EXTINF:-1 tvg-id="CCTV4America.cn@SD" tvg-name="CCTV-4 中文国际(美洲)" group-title="华语",CCTV-4 中文国际(美洲)
 https://global.cgtn.cicc.media.caton.cloud/master/cgtn-america.m3u8
+#EXTINF:-1 tvg-id="CCTV4Asia.cn@SD" tvg-name="CCTV-4 中文国际(亚洲)" group-title="华语",CCTV-4 中文国际(亚洲)
+http://74.91.26.218:82/live/cctv4hd.m3u8
 #EXTINF:-1 tvg-id="CCTV4Europe.cn@SD" tvg-name="CCTV-4 中文国际(欧洲)" group-title="华语",CCTV-4 中文国际(欧洲)
 https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTN.cn@SD" tvg-name="CGTN 中国国际电视台" group-title="华语",CGTN 中国国际电视台
@@ -364,7 +366,7 @@ https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
 #EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
-https://ntd02.akamaized.net/HD-NY/index.m3u8
+https://ntd02.akamaized.net/HD-LA/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/mllive860/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)
@@ -467,8 +469,6 @@ http://111.59.139.85:11888/tsfile/live/1222_1.m3u8?key=txiptv
 http://111.59.139.85:11888/tsfile/live/1220_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-id="8TV.my@SD" tvg-name="马来西亚8TV" group-title="待修复·华语",马来西亚8TV
 http://cdn6.163189.xyz/163189/8tv
-#EXTINF:-1 tvg-id="CCTV4Asia.cn@SD" tvg-name="CCTV-4 中文国际(亚洲)" group-title="待修复·华语",CCTV-4 中文国际(亚洲)
-http://74.91.26.218:82/live/cctv4hd.m3u8
 #EXTINF:-1 tvg-id="CreaTVChannel15.us@SD" tvg-name="CreaTV 15频道" group-title="待修复·华语",CreaTV 15频道
 https://reflect-creatv.cablecast.tv/live-13/live/live.m3u8
 #EXTINF:-1 tvg-id="TechStorm.sg@SD" tvg-name="TechStorm 科技频道" group-title="待修复·华语",TechStorm 科技频道
