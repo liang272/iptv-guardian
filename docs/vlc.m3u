@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-26T18:12:40.877348+00:00
+# 自动维护：2026-11-26T19:15:45.774431+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -269,10 +269,6 @@ http://117.156.28.119/270000001111/1110000149/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://117.156.28.119/270000001111/1110000146/index.m3u8
-#EXTINF:-1 tvg-id="HunanEconomyChannel.cn@SD" tvg-name="湖南经视" tvg-logo="https://www.tvchinese.net/uploads/tv/hnjs.jpg" group-title="大陆",湖南经视
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://p8.vzan.com/slowlive/415983998730568937/live.m3u8
 #EXTINF:-1 tvg-id="HunanTV.cn@SD" tvg-name="湖南卫视" tvg-logo="https://parco-zh.github.io/demo/HNWS.png" group-title="大陆",湖南卫视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -785,6 +781,10 @@ http://pili-live-hls.hebitv.com/hebi/hebi.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://homeplushls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="HunanEconomyChannel.cn@SD" tvg-name="湖南经视" tvg-logo="https://www.tvchinese.net/uploads/tv/hnjs.jpg" group-title="待修复·大陆",湖南经视
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://p8.vzan.com/slowlive/415983998730568937/live.m3u8
 #EXTINF:-1 tvg-id="HunanNewsChannel.cn@SD" tvg-name="湖南新闻频道" tvg-logo="https://static.tvtropes.org/pmwiki/pub/images/hunantv_logo.png" group-title="待修复·大陆",湖南新闻频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
