@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-27T16:52:36.028232+00:00
+# 自动维护：2026-11-27T17:46:07.723144+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -501,10 +501,6 @@ http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" tvg-logo="https://i.imgur.com/kf818kM.png" group-title="中国香港",港台电视31
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="ViuTV.hk@SD" tvg-name="ViuTV 综合台" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ViuTV_logo.svg/960px-ViuTV_logo.svg.png" group-title="中国香港",ViuTV 综合台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -712,7 +708,7 @@ https://online.godstands.tv:5443/WebRTCApp/streams/KidsChinese.m3u8
 #EXTINF:-1 tvg-id="GodStandsTV.pk@Chinese" tvg-name="God Stands 中文台" tvg-logo="https://i.imgur.com/EO6cYUI.png" group-title="华语",God Stands 中文台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://online.godstands.tv:5443/WebRTCApp/streams/PunjabiStreaming.m3u8
+https://online.godstands.tv:5443/WebRTCApp/streams/mainlive.m3u8
 #EXTINF:-1 tvg-id="GuangdongTVAmerica.us@SD" tvg-name="广东电视美洲台" tvg-logo="https://i.imgur.com/7J4qGjA.png" group-title="华语",广东电视美洲台
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -728,7 +724,7 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-name="Love Nature 自然频道" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="华语",Love Nature 自然频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
+https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" tvg-logo="https://i.imgur.com/24ehonx.png" group-title="华语",Luxe 奢华电视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -897,6 +893,10 @@ https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
+#EXTINF:-1 tvg-id="RTHKTV31.hk@SD" tvg-name="港台电视31" tvg-logo="https://i.imgur.com/kf818kM.png" group-title="待修复·中国香港",港台电视31
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV32.hk@SD" tvg-name="港台电视32" tvg-logo="https://i.imgur.com/MXLuUoU.png" group-title="待修复·中国香港",港台电视32
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
