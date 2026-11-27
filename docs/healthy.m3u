@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-27T09:35:22.588197+00:00
+# 自动维护：2026-11-27T10:35:15.755412+00:00
 # 纯净版：只保留未确认失效的频道
 # 通用兼容格式：频道信息行之后紧跟播放地址
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" group-title="大陆",ABN 中国频道
@@ -303,7 +303,7 @@ https://live.streamingfast.net/osmflivech2.m3u8
 #EXTINF:-1 tvg-id="GoodTV.tw@SD" tvg-name="好消息电视" group-title="中国台湾",好消息电视
 https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 tvg-id="HBOAsia.sg@Taiwan" tvg-name="HBO 亚洲(中国台湾)" group-title="中国台湾",HBO 亚洲(中国台湾)
-http://125.227.210.55:1003/VideoInput/play.ts
+http://103.148.210.190:8000/play/a0s8/index.m3u8
 #EXTINF:-1 tvg-id="HakkaTV.tw@SD" tvg-name="客家电视" group-title="中国台湾",客家电视
 https://h5cul1yar48um3t.wcetv.com/hls/hakkatv.m3u8
 #EXTINF:-1 tvg-id="MOMOTV.tw@SD" tvg-name="MOMO 综合台" group-title="中国台湾",MOMO 综合台
@@ -370,6 +370,8 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" group-title="华语",Luxe 奢华电视
 http://103.154.3.101:5001/live/1736.m3u8
+#EXTINF:-1 tvg-id="NTDTV.us@East" tvg-name="新唐人电视(美东)" group-title="华语",新唐人电视(美东)
+https://ntd02.akamaized.net/HD-NY/index.m3u8
 #EXTINF:-1 tvg-id="NTDTVCanada.us@East" tvg-name="新唐人电视(加拿大)" group-title="华语",新唐人电视(加拿大)
 https://live.ntdtv.com/cwlive220/playlist.m3u8
 #EXTINF:-1 tvg-id="NTDTVChina.us@SD" tvg-name="新唐人电视(中国)" group-title="华语",新唐人电视(中国)
