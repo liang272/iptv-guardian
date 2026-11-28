@@ -1,5 +1,5 @@
 #EXTM3U
-# 自动维护：2026-11-28T10:37:05.018559+00:00
+# 自动维护：2026-11-28T11:29:40.062667+00:00
 # VLC/Kodi 增强版：含断流重连与缓冲优化（普通播放器请用 live.m3u）
 #EXTINF:-1 tvg-id="ABNChina.us@SD" tvg-name="ABN 中国频道" tvg-logo="https://i.imgur.com/zagVLQH.png" group-title="大陆",ABN 中国频道
 #EXTVLCOPT:http-reconnect=true
@@ -401,10 +401,6 @@ https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
-#EXTINF:-1 tvg-id="VoATVChina.cn@SD" tvg-name="美国之音中文电视" tvg-logo="https://i.imgur.com/XCTZkoq.png" group-title="大陆",美国之音中文电视
-#EXTVLCOPT:http-reconnect=true
-#EXTVLCOPT:network-caching=1000
-https://voa-ingest.akamaized.net/hls/live/2033878/tvmc08/playlist.m3u8
 #EXTINF:-1 tvg-id="XianBusinessInformationChannel.cn@SD" tvg-name="西安商务资讯频道" tvg-logo="https://i.imgur.com/dzdiY4O.png" group-title="大陆",西安商务资讯频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -728,7 +724,7 @@ https://brightstar-chinese-pull-secure.akamaized.net/brightstarchinese/stream.m3
 #EXTINF:-1 tvg-id="LoveNature.ca@SD" tvg-name="Love Nature 自然频道" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="华语",Love Nature 自然频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
-https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+http://88.212.15.50/live/test_love_nature_uhd_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="LuxeTV.lu@SD" tvg-name="Luxe 奢华电视" tvg-logo="https://i.imgur.com/24ehonx.png" group-title="华语",Luxe 奢华电视
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
@@ -877,6 +873,10 @@ https://livepull-tcms.sztv.com.cn/live/sz4Kpgm.m3u8
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
 http://lsfb.avap.jilintv.cn/zqvk7vpj/channel/43ea5771aa44421591f9dfd2b71f1b9b/index.m3u8
+#EXTINF:-1 tvg-id="VoATVChina.cn@SD" tvg-name="美国之音中文电视" tvg-logo="https://i.imgur.com/XCTZkoq.png" group-title="待修复·大陆",美国之音中文电视
+#EXTVLCOPT:http-reconnect=true
+#EXTVLCOPT:network-caching=1000
+https://voa-ingest.akamaized.net/hls/live/2033878/tvmc08/playlist.m3u8
 #EXTINF:-1 tvg-id="CelestialMovies.hk@SD" tvg-name="天映电影频道" tvg-logo="https://i.imgur.com/Mb5ssnu.png" group-title="待修复·中国香港",天映电影频道
 #EXTVLCOPT:http-reconnect=true
 #EXTVLCOPT:network-caching=1000
